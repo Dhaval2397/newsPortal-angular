@@ -5,6 +5,7 @@
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
+
 .top-news-left {
     .carousel {
         &.slide {
@@ -59,6 +60,37 @@
                 bottom: 50%;
                 height:40px;
                 width: 40px;
+                right: 10px;
+                padding: 10px;
+                background-color: black;
+                color: #fff;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+.trending {
+    .carousel {
+        &.slide {
+            .carousel-indicators {
+                display: none;
+            }
+            .carousel-control-prev{
+                top: 45%;
+                bottom: 50%;
+                height: 50px;
+                width: 50px;
+                left: 10px;
+                padding: 10px;
+                background-color: black;
+                color: #fff;
+                border-radius: 5px;
+            }
+            .carousel-control-next{
+                top: 45%;
+                bottom: 50%;
+                height:50px;
+                width: 50px;
                 right: 10px;
                 padding: 10px;
                 background-color: black;

@@ -17,6 +17,10 @@ import { NewsCategoryComponent } from './home/news-category/news-category.compon
 import { ShortNewsComponent } from './home/short-news/short-news.component';
 import { MainNewsComponent } from './home/main-news/main-news.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
+import { TrendingNewsComponent } from './category-page/trending-news/trending-news.component';
+import { DetailListComponent } from './category-page/detail-list/detail-list.component';
+import { ExclusiveNewsComponent } from './category-page/exclusive-news/exclusive-news.component';
+import { MoreNewsComponent } from './category-page/more-news/more-news.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +34,10 @@ import { CategoryPageComponent } from './category-page/category-page.component';
     ShortNewsComponent,
     MainNewsComponent,
     CategoryPageComponent,
+    TrendingNewsComponent,
+    DetailListComponent,
+    ExclusiveNewsComponent,
+    MoreNewsComponent
   ],
   imports: [
     BrowserModule,

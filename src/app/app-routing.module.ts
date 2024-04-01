@@ -10,7 +10,7 @@ import { PopularNewsComponent } from './home/short-news/popular-news/popular-new
 
 const routes: Routes = [
   {
-    path:'category-news',
+    path:'xy',
     component:CategoryPageComponent,
   },
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
     component:ContactComponent,
   },
   {
-    path:'home',
+    path:'',
     component:HomeComponent,
     children:[
       {

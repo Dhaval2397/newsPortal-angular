@@ -1,0 +1,29 @@
+.item-inner {
+    position: relative;
+
+    .tr-title {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #000000cb;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-inline: 10px;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            font-size: 28px;
+            line-height: 32px;
+            font-weight: 400;
+            color: #faebd7;
+
+            &:hover {
+                color: #a52a2a;
+            }
+        }
+    }
+
+}
