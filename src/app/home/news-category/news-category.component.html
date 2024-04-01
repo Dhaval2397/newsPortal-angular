@@ -1,0 +1,187 @@
+<div class="news-category">
+    <div class="row">
+        <div class="col-lg-6 mb-3" *ngFor="let x of category_list">
+            <div class="news-category-inner p-3">
+                <div class="news-category-header pb-2 d-flex">
+                    <a href="/category.html" class="header-title" routerLink="category-news">{{x.title}}</a>
+                </div>
+                <div class="news-category-list p-3">
+                    <ngb-carousel>
+                        <ng-template ngbSlide data-interval="false" *ngFor="let y of x.images">
+                            <div class="card tn-img p-1">
+                                <img src="{{y}}"
+                                class="card-img-top" alt="news-img" height="175px">
+                                <div class="card-body pb-3">
+                                    <a href="#" class="card-text mb-5">Some quick example text to build on
+                                        the
+                                        card title
+                                        and make up the bulk of the card's content.</a>
+                                    </div>
+                            </div>
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <ng-template ngbSlide data-interval="false">
+    <div class="card tn-img p-1">
+        <img src="https://static.toiimg.com/thumb/msid-74014434,width-400,resizemode-4/74014434.jpg"
+            class="card-img-top" alt="..." height="175px">
+        <div class="card-body pb-3">
+            <a href="#" class="card-text">Some quick example text to build on the
+                card title
+                and make up the bulk of the card's content.</a>
+        </div>
+    </div>
+</ng-template> -->
+<!-- <div class="ms-auto mt-1">
+    <button class="btn customPrevBtn-1 carousel-btn"><i
+            class="fa-solid fa-chevron-left"></i></button>
+    <button class="btn customNextBtn-1 carousel-btn"><i
+            class="fa-solid fa-chevron-right"></i></button>
+</div> -->
+<!-- <div class="col-lg-6 mb-3">
+    <div class="news-category-inner p-3">
+        <div class="news-category-header pb-2 d-flex">
+            <a href="/category.html" class="header-title">Business</a>
+            <div class="ms-auto mt-1">
+                <button class="btn customPrevBtn-2 carousel-btn"><i
+                        class="fa-solid fa-chevron-left"></i></button>
+                <button class="btn customNextBtn-2 carousel-btn"><i
+                        class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="news-category-list p-3">
+            <div class="owl-carousel owl-theme news-category-list-carousel list-2">
+                <div class="item">
+                    <div class="card tn-img p-1">
+                        <img src="https://static-assets.business.amazon.com/assets/in/17th-aug-2022/910_AB_Website_Cover_1450x664_03.jpg.transform/1450x664/image.jpg"
+                            class="card-img-top" alt="..." height="175px">
+                        <div class="card-body pb-3">
+                            <a href="#" class="card-text">Some quick example text to build on the
+                                card title
+                                and make up the bulk of the card's content.</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card tn-img p-1">
+                        <img src="https://imageio.forbes.com/specials-images/imageserve/633a774a842d06ecd68286ff/The-5-Biggest-Business-Trends-For-2023/960x0.jpg?height=430&width=711&fit=bounds"
+                            class="card-img-top" alt="..." height="175px">
+                            <div class="card-body pb-3">
+                                <a href="#" class="card-text">Some quick example text to build on the
+                                card title
+                                and make up the bulk of the card's content.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6 mb-3">
+    <div class="news-category-inner p-3">
+        <div class="news-category-header pb-2 d-flex">
+            <a href="/category.html" class="header-title">Entertainment</a>
+            <div class="ms-auto mt-1">
+                <button class="btn customPrevBtn-3 carousel-btn"><i
+                        class="fa-solid fa-chevron-left"></i></button>
+                <button class="btn customNextBtn-3 carousel-btn"><i
+                        class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="news-category-list p-3">
+            <div class="owl-carousel owl-theme news-category-list-carousel list-3">
+                <div class="item">
+                    <div class="card tn-img p-1">
+                        <img src="https://i.ytimg.com/vi/GkIKfejYlxo/maxresdefault.jpg"
+                            class="card-img-top" alt="..." height="175px">
+                            <div class="card-body pb-3">
+                            <a href="#" class="card-text">Some quick example text to build on the
+                                card title
+                                and make up the bulk of the card's content.</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card tn-img p-1">
+                        <img src="https://images.indianexpress.com/2022/04/alia-ranbir-ajay-devgn-runway-34-trailer-KGF-release-1200.jpg?w=414"
+                            class="card-img-top" alt="..." height="175px">
+                        <div class="card-body pb-3">
+                            <a href="#" class="card-text">Some quick example text to build on the
+                                card title
+                                and make up the bulk of the card's content.</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6 mb-3">
+    <div class="news-category-inner p-3">
+        <div class="news-category-header pb-2 d-flex">
+            <a href="/category.html" class="header-title">Technology</a>
+            <div class="ms-auto mt-1">
+                <button class="btn customPrevBtn-4 carousel-btn me-2"><i
+                        class="fa-solid fa-chevron-left"></i></button>
+                <button class="btn customNextBtn-4 carousel-btn"><i
+                        class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+        </div>
+        <div class="news-category-list p-3">
+            <div class="owl-carousel owl-theme news-category-list-carousel list-4">
+                <div class="item">
+                    <div class="card tn-img p-1">
+                        <img src="https://contentstatic.techgig.com/photo/87503372/techgig-daily-tech-news-digest-03-november.jpg?1189006"
+                            class="card-img-top" alt="..." height="175px">
+                        <div class="card-body pb-3">
+                            <a href="#" class="card-text">Some quick example text to build on the
+                                card title
+                                and make up the bulk of the card's content.</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card tn-img p-1">
+                        <img src="https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2021/02/Brad-Blog-Aus-Header-scaled.jpg"
+                            class="card-img-top" alt="..." height="175px">
+                            <div class="card-body pb-3">
+                                <a href="#" class="card-text">Some quick example text to build on the
+                                card title
+                                and make up the bulk of the card's content.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="owl-carousel owl-theme news-category-list-carousel list-1">
+    <div class="item">
+        <div class="card tn-img p-1">
+            <img src="https://images.indianexpress.com/2024/03/ashwin-100th-test.jpg?w=640"
+                class="card-img-top" alt="..." height="175px">
+            <div class="card-body pb-3">
+                <a href="#" class="card-text mb-5">Some quick example text to build on
+                    the
+                    card title
+                    and make up the bulk of the card's content.</a>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="card tn-img p-1">
+            <img src="https://static.toiimg.com/thumb/msid-74014434,width-400,resizemode-4/74014434.jpg"
+                class="card-img-top" alt="..." height="175px">
+            <div class="card-body pb-3">
+                <a href="#" class="card-text">Some quick example text to build on the
+                    card title
+                    and make up the bulk of the card's content.</a>
+            </div>
+        </div>
+    </div>
+</div> -->

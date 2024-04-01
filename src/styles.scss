@@ -1,1 +1,135 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+.top-news-left {
+    .carousel {
+        &.slide {
+            .carousel-indicators {
+                display: none;
+            }
+            .carousel-control-prev{
+                top: 45%;
+                bottom: 50%;
+                height: 50px;
+                width: 50px;
+                left: 10px;
+                padding: 10px;
+                background-color: black;
+                color: #fff;
+                border-radius: 5px;
+            }
+            .carousel-control-next{
+                top: 45%;
+                bottom: 50%;
+                height: 50px;
+                width: 50px;
+                right: 10px;
+                padding: 10px;
+                background-color: black;
+                color: #fff;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.news-category-list {
+    .carousel {
+        &.slide {
+            .carousel-indicators {
+                display: none;
+            }
+            .carousel-control-prev{
+                top: 45%;
+                bottom: 50%;
+                height: 40px;
+                width: 40px;
+                left: 10px;
+                padding: 10px;
+                background-color: black;
+                color: #fff;
+                border-radius: 5px;
+            }
+            .carousel-control-next{
+                top: 45%;
+                bottom: 50%;
+                height:40px;
+                width: 40px;
+                right: 10px;
+                padding: 10px;
+                background-color: black;
+                color: #fff;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+.short-news {
+
+
+    .nav-tabs {
+        border-bottom: none;
+        background-color: #faebd7;
+        border-radius: 10px 10px 0px 0px;
+
+        .nav-item {
+            margin-right: 4px;
+
+            .nav-link {
+                &.sn-link {
+                    color: #a52a2a;
+                    font-size: 14px;
+                    font-weight: 500;
+                    border: none;
+                    border-radius: 7px;
+                    padding-inline: 5px;
+                    &.active {
+                        background-color: #a52a2a;
+                        color: #faebd7;
+                        border-radius: 7px;
+                    }
+                    &:hover {
+                        background-color: #a52a2a;
+                        border: none;
+                        color: #faebd7;
+                    }
+
+                }
+
+
+            }
+        }
+    }
+
+    // .sn-content {
+        // background-color: #fff;
+        // height: 350px;
+
+        .sn-content-item {
+            background-color: none;
+
+            div {
+                overflow: hidden;
+
+                a {
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    white-space: wrap;
+                    word-break: break-all;
+                    color: #4e4b66;
+
+                    &:hover {
+                        color: #bb3434;
+                    }
+                }
+            }
+        }
+    }
+// }
+

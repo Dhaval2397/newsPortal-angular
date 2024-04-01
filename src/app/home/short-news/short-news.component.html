@@ -1,0 +1,162 @@
+<div class="short-news mb-3">
+    <div class="row">
+        <div class="col-lg-6 mb-3">
+            <ul class="nav nav-tabs p-2" id="myTab">
+                <li class="nav-item">
+                    <a href="#featured" class="nav-link sn-link" routerLink="">Featured News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#popular" class="nav-link sn-link" routerLink="popular-news">Popular News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#latest" class="nav-link sn-link" routerLink="latest-news">Latest News</a>
+                </li>
+            </ul>
+            <router-outlet></router-outlet>
+            <!-- <div class="tab-content sn-content p-3">
+                <div class="tab-pane fade show active" id="featured">
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://miro.medium.com/v2/resize:fit:800/1*Bl6HcbZYF77-i8fjUMSWAw.jpeg"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. A,
+                                debitis.</a> </div>
+                    </div>
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://globalnews.ca/wp-content/uploads/2019/12/contest-davidson-newspaper.jpg?quality=85&strip=all&w=336"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. A
+                                debitis.</a> </div>
+                    </div>
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://images.seattletimes.com/wp-content/uploads/2023/01/01252023_Ashland_News_172411.jpg?d=2040x1312"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. A,
+                                debitis.</a> </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="popular">
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://static.toiimg.com/thumb/msid-108246802,width-450,resizemode-4,imgsize-42130/92120052.jpg"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">India ensuring no one exercises hegemony in Indian
+                                Ocean: Rajnath Singh's veiled dig at China</a> </div>
+                    </div>
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://c.ndtvimg.com/2024-03/d63da9e8_pm-narendra-modi_120x90_06_March_24.jpg"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">"Using All Might To Save Culprit": PM's Sheikh
+                                Shahjahan Barb At Trinamool</a> </div>
+                    </div>
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://www.hindustantimes.com/ht-img/img/2024/03/06/550x309/Propaganda_Ukrainian_YouTuber_Deepfake_Chinese_1709707746696_1709707746906.png"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">Ukrainian YouTuber finds deepfakes of herself on
+                                Chinese social media, claims they're being used to promote propagand</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="latest">
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://www.livemint.com/lm-img/img/2024/03/06/600x338/SC_1709708664088_1709708664225.jpg"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">
+                                Sandeshkhali case: West Bengal govt seeks urgent listing of plea in SC
+                                against transfer of probe to CBI</a></div>
+                    </div>
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://images.indianexpress.com/2024/03/Modi-N24.jpeg?w=430"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. A,
+                                debitis.</a> </div>
+                    </div>
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://images.indianexpress.com/2024/03/ukraine-russia.jpg?w=640"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">7 more Indians release video, say forced to fight
+                                Ukraine war by Russian army</a> </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="col-lg-6">
+            <ul class="nav nav-tabs p-2" id="mytab">
+                <li class="nav-item">
+                    <a href="#viewed" class="nav-link sn-link" data-bs-toggle="tab">Most Viewed</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#read" class="nav-link sn-link" data-bs-toggle="tab">Most Read</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#recent" class="nav-link sn-link" data-bs-toggle="tab">Most Recent</a>
+                </li>
+            </ul>
+            <div class="tab-content sn-content p-3">
+                <div class="tab-pane fade show active" id="viewed">
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://i.guim.co.uk/img/media/2941c4661a57c10a0adb922459bb92439c65802e/0_0_2999_1800/master/2999.jpg?width=620&dpr=1&s=none"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">Haley wins surprise Vermont victory as Biden and Trump
+                                dominate Super Tuesday</a></div>
+                    </div>
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://i.guim.co.uk/img/media/421289a6ae72b9475ec6143fd6b26f22d7cf3e59/0_187_4374_2625/master/4374.jpg?width=620&dpr=1&s=none"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">People in England facing food poisoning ‘Russian
+                                roulette’ as illnesses soar</a> </div>
+                    </div>
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://i.guim.co.uk/img/media/4e865b6c2420bc3406dcb9882947865f81f495aa/0_0_3500_2101/master/3500.jpg?width=620&dpr=1&s=none"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">Hypervaccinated’ man reportedly received 217 Covid jabs
+                                without side-effects
+                            </a></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade show" id="read">
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://c.ndtvimg.com/2022-11/c9j2ghq_rahul-priyanka_625x300_24_November_22.jpg"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">Priyanka Gandhi's Poll Debut From Raebareli, Rahul To
+                                Try And Reclaim Amethi</a> </div>
+                    </div>
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://c.ndtvimg.com/2023-07/q3722mug_electric-vehicles-bloomberg_625x300_18_July_23.jpg"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">Electric Vehicles Emit More Particle Pollution Than
+                                Petrol, Diesel Cars, Claims Study</a> </div>
+                    </div>
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://c.ndtvimg.com/2024-03/svuvbrhc_trump-biden-split-reuters_625x300_06_March_24.jpg?im=FeatureCrop,algorithm=dnn,width=650,height=400"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">Trump, Biden Dominate Super Tuesday Polls As They March
+                                Toward Rematch</a> </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade show" id="recent">
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://images.indianexpress.com/2024/03/ashwin-100th-test.jpg?w=640"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">R Ashwin’s journey to 100 Tests, through the eyes of
+                                wife Prithi</a> </div>
+                    </div>
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://images.indianexpress.com/2024/03/Nirav-Modi-Vijay-Mallya.jpg?w=640"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">Modi ka Parivar: Posters with picture of PM with
+                                fugitives Nirav Modi, Vijay Mallya come up in Delhi; FIR filed</a> </div>
+                    </div>
+                    <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <img src="https://theottoboiler.pro/lander/in-mukesh-ambani_1709640971/1.png"
+                            class="img-fluid h-25 w-25" alt="news">
+                        <div class="ms-1"><a href="">JUST IN: Ratan Tata unveils his secret to enrich
+                                ordinary Indians.</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

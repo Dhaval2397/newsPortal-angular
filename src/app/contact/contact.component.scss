@@ -1,0 +1,99 @@
+.contact {
+    margin-top: 120px;
+    // margin-bottom: 2000px;
+    // background-color: #f8f8f8;
+
+    .contact-form {
+        .form-control {
+            &.contact-info {
+                // background-color: #faebd7;
+                border: 1px solid;
+
+                &::placeholder {
+                    // color: #;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+
+                &:focus {
+                    box-shadow: none;
+                    border: 1px solid #aaa3b9;
+                }
+            }
+        }
+
+        .send-btn {
+            background-color: #a52a2a;
+            color: #faebd7;
+            border: 2px solid #faebd7;
+
+            &:hover {
+                color: #a52a2a;
+                border: 2px solid #a52a2a;
+                background-color: #faebd7;
+            }
+        }
+    }
+
+    .contact-info {
+        .get-in-touch {
+            font-size: 32px;
+            line-height: 36px;
+            font-weight: 600;
+            color: #a52a2a;
+        }
+
+        .contact-info-text {
+            font-size: 18px;
+            font-weight: 400;
+            color: #4e4b66;
+            line-height: 24px;
+        }
+
+
+        .info-item {
+            i {
+                color: #a52a2a;
+            }
+
+            font-size: 18px;
+            line-height: 24px;
+            color:#696060;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                color: #a52a2a;
+            }
+        }
+
+        .social-list {
+            display: flex;
+
+            a {
+                background-color: #faebd7;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+
+                i {
+                    color: #a52a2a;
+                }
+
+                &:hover {
+                    background-color: #a52a2a;
+
+                    i {
+                        color: #faebd7;
+                    }
+                }
+            }
+        }
+
+    }
+}

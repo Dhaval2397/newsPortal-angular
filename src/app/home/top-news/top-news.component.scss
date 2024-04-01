@@ -1,0 +1,90 @@
+.main-news {
+    .mn-content {
+        background-color: #fff;
+        border-radius: 10px;
+
+        .mn-item {
+            .mn-img {
+                position: relative;
+
+                .mn-title {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    background-color: #000000cb;
+                    // text-align: center;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding-inline: 10px;
+
+                    a {
+                        text-decoration: none;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        color: #faebd7;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: #a52a2a;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .read-more {
+        background-color: #fff;
+        border-radius: 10px;
+
+        .rm-heading {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 36px;
+            color: #a52a2a;
+            border-bottom: 8px double #aaa3b9;
+        }
+
+        .rm-list {
+            list-style: none;
+            padding: 10px;
+            padding-left: 23px;
+
+            .rm-item {
+                position: relative;
+                white-space: wrap;
+
+                &::before {
+                    position: absolute;
+                    content: '\f061';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    // color: #145da0;
+                    color: #a52a2a;
+                    left: -18px;
+                    top: 2px;
+                }
+
+
+                .rm-link {
+                    white-space: wrap;
+                    word-break: break-all;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    line-height: 28px;
+                    font-weight: 500;
+                    color: #4e4b66;
+
+                    &:hover {
+                        color: #a52a2a;
+                    }
+                }
+            }
+        }
+    }
+}

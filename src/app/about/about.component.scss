@@ -1,0 +1,28 @@
+.about-us-banner {
+    margin-top: 100px;
+
+    // .img-inner {
+    //     img{
+    //         border:15px groove black
+    //     }
+    // }
+
+    .banner-inner {
+        background-color: #fff;
+        border-radius: 10px;
+
+        .banner-title {
+            font-size: 90px;
+            font-weight: 700;
+            line-height: 100px;
+            color: #a52a2a;
+        }
+
+        .banner-text {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #4e4b66;
+        }
+    }
+}
