@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class CategoryListComponent {
   categories = [
-    'Sport', 'Entertainment', 'Business', 'Bollywood', 'Politic', 'Education', 'Web Series',
+    'Sport', 'Entertainment', 'Business','Science', 'Bollywood', 'Politic', 'Education', 'Web Series',
     'Health & Wellness', 'Prices', 'Currencies', 'Lifestyle', 'Technology', 'Trending',
     'Food', 'Robotics', 'Art & Craft', 'Arcitructure', 'Defence'
   ];

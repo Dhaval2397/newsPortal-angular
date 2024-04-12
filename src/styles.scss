@@ -12,7 +12,8 @@
             .carousel-indicators {
                 display: none;
             }
-            .carousel-control-prev{
+
+            .carousel-control-prev {
                 top: 45%;
                 bottom: 50%;
                 height: 50px;
@@ -23,7 +24,8 @@
                 color: #fff;
                 border-radius: 5px;
             }
-            .carousel-control-next{
+
+            .carousel-control-next {
                 top: 45%;
                 bottom: 50%;
                 height: 50px;
@@ -44,8 +46,9 @@
             .carousel-indicators {
                 display: none;
             }
-            .carousel-control-prev{
-                top: 45%;
+
+            .carousel-control-prev {
+                top: 30%;
                 bottom: 50%;
                 height: 40px;
                 width: 40px;
@@ -55,10 +58,11 @@
                 color: #fff;
                 border-radius: 5px;
             }
-            .carousel-control-next{
-                top: 45%;
+
+            .carousel-control-next {
+                top: 30%;
                 bottom: 50%;
-                height:40px;
+                height: 40px;
                 width: 40px;
                 right: 10px;
                 padding: 10px;
@@ -69,13 +73,15 @@
         }
     }
 }
+
 .trending {
     .carousel {
         &.slide {
             .carousel-indicators {
                 display: none;
             }
-            .carousel-control-prev{
+
+            .carousel-control-prev {
                 top: 45%;
                 bottom: 50%;
                 height: 50px;
@@ -86,10 +92,11 @@
                 color: #fff;
                 border-radius: 5px;
             }
-            .carousel-control-next{
+
+            .carousel-control-next {
                 top: 45%;
                 bottom: 50%;
-                height:50px;
+                height: 50px;
                 width: 50px;
                 right: 10px;
                 padding: 10px;
@@ -100,9 +107,8 @@
         }
     }
 }
+
 .short-news {
-
-
     .nav-tabs {
         border-bottom: none;
         background-color: #faebd7;
@@ -119,11 +125,13 @@
                     border: none;
                     border-radius: 7px;
                     padding-inline: 5px;
+
                     &.active {
                         background-color: #a52a2a;
                         color: #faebd7;
                         border-radius: 7px;
                     }
+
                     &:hover {
                         background-color: #a52a2a;
                         border: none;
@@ -138,34 +146,32 @@
     }
 
     // .sn-content {
-        // background-color: #fff;
-        // height: 350px;
+    // background-color: #fff;
+    // height: 350px;
 
-        .sn-content-item {
-            background-color: none;
+    .sn-content-item {
+        background-color: none;
 
-            div {
-                overflow: hidden;
+        div {
+            overflow: hidden;
 
-                a {
-                    text-decoration: none;
-                    font-size: 18px;
-                    font-weight: 400;
-                    line-height: 24px;
-                    white-space: wrap;
-                    word-break: break-all;
-                    color: #4e4b66;
+            a {
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px;
+                white-space: wrap;
+                word-break: break-all;
+                color: #4e4b66;
 
-                    &:hover {
-                        color: #bb3434;
-                    }
+                &:hover {
+                    color: #bb3434;
                 }
             }
         }
     }
-    a{
-        cursor: pointer;
-        // padding: 10px ;
-    }
-// }
+}
 
+a {
+    cursor: pointer;
+}
