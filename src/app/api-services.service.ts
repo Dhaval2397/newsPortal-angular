@@ -8,8 +8,8 @@ export class ApiServicesService {
 
   constructor(private sport_api: HttpClient, private news_api_1: HttpClient, private bussiness_api: HttpClient, private news_api_2: HttpClient, private entertaiment_api: HttpClient, private technology_api: HttpClient, private usnews_api: HttpClient, private uknews_api: HttpClient) { }
   getsportdata() {
-    // return this.sport_api.get('https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=c9d63f32f5a547a38759337bba75acba');
-    return this.sport_api.get('https://newsdata.io/api/1/news?apikey=pub_41456908e6d0385e0144ded3b55c9001a3e95&q=sport%20news%20india&country=in&language=en&category=sports ');
+    return this.sport_api.get('https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=c9d63f32f5a547a38759337bba75acba');
+    // return this.sport_api.get('https://newsdata.io/api/1/news?apikey=pub_41456908e6d0385e0144ded3b55c9001a3e95&q=sport%20news%20india&country=in&language=en&category=sports ');
   }
 
   getnewsdata() {
