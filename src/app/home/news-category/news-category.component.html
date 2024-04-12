@@ -9,13 +9,10 @@
                     <ngb-carousel>
                         <ng-template ngbSlide data-interval="false" *ngFor="let y of x.images">
                             <div class="card tn-img p-1">
-                                <img src="{{y}}"
-                                class="card-img-top" alt="news-img" height="175px">
+                                <img src="{{y.src}}"
+                                class="card-img-top" alt="news-img" height="250px">
                                 <div class="card-body pb-3">
-                                    <a href="#" class="card-text mb-5">Some quick example text to build on
-                                        the
-                                        card title
-                                        and make up the bulk of the card's content.</a>
+                                    <a href="#" class="card-text mb-5">{{y.title}}</a>
                                     </div>
                             </div>
                         </ng-template>

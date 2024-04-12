@@ -10,9 +10,9 @@ import { MoreNewsComponent } from './more-news/more-news.component';
 
 @NgModule({
   declarations: [
-    TrendingNewsComponent,
-    DetailListComponent,
-    ExclusiveNewsComponent,
+    // TrendingNewsComponent,
+    // DetailListComponent,
+    // ExclusiveNewsComponent,
     // MoreNewsComponent
   ],
   imports: [

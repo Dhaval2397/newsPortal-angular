@@ -9,9 +9,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o/lib/models/owl-options.model';
 export class ExclusiveNewsComponent {
   customOptions: OwlOptions = {
     loop: true,
-    autoplay:true,
-   
-   
+    autoplay: true,
+    margin: 10,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
@@ -34,5 +33,10 @@ export class ExclusiveNewsComponent {
     },
     nav: false
   }
-
+  img_data = [
+    { src: "https://images.indianexpress.com/2024/03/ashwin-100th-test.jpg?w=640", title: "Some quick example text to build on the card title and make up the bulk of the card's content." },
+    { src: "https://static.toiimg.com/thumb/msid-74014434,width-400,resizemode-4/74014434.jpg", title: "Some quick example text to build on the card title and make up the bulk of the card's content." },
+    { src: "https://images.indianexpress.com/2024/03/ashwin-100th-test.jpg?w=640", title: "Some quick example text to build on the card title and make up the bulk of the card's content." },
+    { src: "https://static.toiimg.com/thumb/msid-74014434,width-400,resizemode-4/74014434.jpg", title: "Some quick example text to build on the card title and make up the bulk of the card's content." }
+  ]
 }

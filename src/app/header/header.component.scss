@@ -1,7 +1,7 @@
 .header {
 
     .news-navbar {
-        // background: #a52a2a;
+        background: #a52a2a;
 
         .nav-toogle-btn {
             background-color: #faebd7;
@@ -14,12 +14,14 @@
         div {
             ul {
                 li {
+                    margin-inline: 5px;
                     a {
-                        color: #a52a2a;
+                        color: #faebd7;
                         font-size: 18px;
                         font-weight: 400;
                         line-height: 24px;
                         border-radius: 8px;
+                        padding-inline: 15px;
 
                         &:hover {
                             // border-bottom: 2px solid #fff;
@@ -27,11 +29,6 @@
                             background-color: #faebd7;
                             border-radius: 8px;
                         }
-
-                        // &:focus {
-                        //     color: #674188;
-                        //     // border-bottom: 2px solid #fff;
-                        // }
                     }
                 }
             }
