@@ -1,0 +1,102 @@
+<!-- <app-category-list></app-category-list> -->
+<div class="container detail-page-wrapper">
+    <div class="mb-5">
+        <p class="detail-title">{{title}}</p>
+        <div class="detail-img-wrapper my-4">
+            <img  src="{{src}}" width="100%" height="400px" alt="news_img">
+        </div>
+        <p class="detail-description">{{desc}}</p>
+        <p class="detail-content">{{cont}}</p>
+        <p class="detail-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. A placeat aspernatur et
+            tempora recusandae debitis magnam laboriosam. Iste aperiam pariatur quaerat quam iusto incidunt. Illo cumque
+            eveniet dignissimos laborum repellat odio. Placeat animi nulla pariatur, veritatis harum explicabo sunt
+            incidunt et, necessitatibus id eaque inventore iusto error voluptate magnam dicta.</p>
+    </div>
+    <div>
+        <div class="more-news mb-5">
+            <div class="row g-2">
+                <div class="col-12 col-md-6" *ngFor="let x of news_data_arr_1">
+                    <div class="card h-100">
+                        <img *ngIf="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM=';"
+                            [src]="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                            class="card-img-top" alt="news_img" width="auto" height="300px">
+                        <!-- <ng-template #defaultImage>
+                            <img src="default-image-url.jpg" alt="Default Image">
+                        </ng-template> -->
+                        <div class="card-body">
+                            <a (click)="navigate(x.title, x.description, x.content, x.urlToImage)"
+                                class="card-text">{{x.title}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="more-news mb-5">
+            <div class="row gy-4 gx-2">
+                <div class="col-12 col-md-6 col-lg-4" *ngFor="let y of news_data_arr_2">
+                    <div class="card h-100">
+                        <img *ngIf="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM=';"
+                            [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                            class="card-img-top" alt="news_img" height="200px" width="auto">
+                        <!-- <ng-template #defaultImage>
+                            <img src="default-image-url.jpg" alt="Default Image">
+                        </ng-template> -->
+                        <div class="card-body">
+                            <a (click)="navigate(y.title, y.description, y.content, y.urlToImage)"
+                                class="card-text">{{y.title}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="more-news">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-7 mb-3" *ngFor="let z of news_data_arr_3">
+                <div class="d-flex flex-column">
+                    <div class="mb-2">
+                        <img src="{{z.urlToImage}}" alt="news-img" width="100%" height="auto">
+                    </div>
+                    <div>
+                        <a (click)="navigate(z.title, z.description, z.content, z.urlToImage)">{{z.title}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-5" *ngFor="let w of news_data_arr_4">
+                <div class="d-flex flex-column">
+                    <div class="mb-2 order-last order-md-first">
+                        <a (click)="navigate(w.title, w.description, w.content, w.urlToImage)">{{w.title}}</a>
+                    </div>
+                    <div class="order-first order-md-last mb-2">
+                        <img src="{{w.urlToImage}}" alt="news-img" height="200px" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="more-news mt-5">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-5" *ngFor="let a of news_data_arr_5">
+                <div class="d-flex flex-column">
+                    <div class="mb-2 order-last order-md-first">
+                        <a (click)="navigate(a.title, a.description, a.content, a.urlToImage)">{{a.title}}</a>
+                    </div>
+                    <div class="order-first order-md-last mb-2">
+                        <img src="{{a.urlToImage}}" alt="news-img" height="200px" width="100%">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-7 mb-3" *ngFor="let b of news_data_arr_6">
+                <div class="d-flex flex-column">
+                    <div class="mb-2">
+                        <img src="{{b.urlToImage}}" alt="news-img" width="100%" height="auto">
+                    </div>
+                    <div>
+                        <a (click)="navigate(b.title, b.description, b.content, b.urlToImage)">{{b.title}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>

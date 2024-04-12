@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ApiServicesService } from '../../api-services.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-news',
@@ -6,6 +8,19 @@ import { Component } from '@angular/core';
   styleUrl: './top-news.component.scss'
 })
 export class TopNewsComponent {
+  news_data_arr_3: any;
+  news_data_arr_2: any;
+  constructor(private news_data: ApiServicesService, private router:Router) {
+    news_data.getnewsdata().subscribe((data: any) => {
+      this.news_data_arr_3 = data.articles;
+      this.news_data_arr_3 = this.news_data_arr_3.slice(5, 17);
+    });
+    news_data.getnewsdata().subscribe((data:any)=>{
+      this.news_data_arr_2=data.articles;
+      this.news_data_arr_2 = this.news_data_arr_2.slice(9, 15);
+    });
+  }
+
   data_of_news = [
     { url: "https://static.toiimg.com/thumb/msid-108268958,imgsize-1515286,width-400,resizemode-4/108268958.jpg", title: 'Nikki Haley to exit US Republican presidential race: Report' },
     { url: "https://images.indianexpress.com/2024/03/IOC-1.jpg?w=640", title: 'Grand Prix dreams: IOC to make Formula 1 fuel, pitch it to top racing teams' },
@@ -19,29 +34,43 @@ export class TopNewsComponent {
     { url: "https://images.indianexpress.com/2024/03/arrest1_253389.jpeg?w=640", title: 'Uttarakhand: Journalist arrested,DGP says agenda aims to sow anarchy' },
     { url: "https://images.indianexpress.com/2024/03/artificial-intelligence.jpg?w=640", title: 'Ex-Google software engineer charged with stealing AI technology while working with Chinese companies' },
     {
-      url: "https://images.indianexpress.com/2024/03/Untitled-design-62.jpg?w=640", title: 'Ban on Paytm Payment Bank:85% of Paytm wallet users unlikely to be impacted, says RBI Governor Das' },
+      url: "https://images.indianexpress.com/2024/03/Untitled-design-62.jpg?w=640", title: 'Ban on Paytm Payment Bank:85% of Paytm wallet users unlikely to be impacted, says RBI Governor Das'
+    },
   ];
   useful_news = [
     {
-      link:"Lok Sabha Election 2024 Campaign Live Updates: 'Storm from Sandeshkhali will reach every part of West Bengal,' says PM Modi, meets women from violence-hit area"
+      link: "Lok Sabha Election 2024 Campaign Live Updates: 'Storm from Sandeshkhali will reach every part of West Bengal,' says PM Modi, meets women from violence-hit area"
     },
     {
-      link:"Aadhaar seeding with voter ID: EC wants law amended to clarify it’s voluntary"
+      link: "Aadhaar seeding with voter ID: EC wants law amended to clarify it’s voluntary"
     },
     {
-      link:"Court asks Kejriwal to appear before it on March 16 after he skips ED summons"
+      link: "Court asks Kejriwal to appear before it on March 16 after he skips ED summons"
     },
     {
-      link:"Today in Politics: All eyes on PM Modi’s Kashmir rally, first since Article 370 abrogation; BJP-BJD tie-up set to be sealed"
+      link: "Today in Politics: All eyes on PM Modi’s Kashmir rally, first since Article 370 abrogation; BJP-BJD tie-up set to be sealed"
     },
     {
-      link:"Court cites Yogi example: ‘Religious persons should hold posts of power’"
+      link: "Court cites Yogi example: ‘Religious persons should hold posts of power’"
     },
     {
-      link:"Devdutt Padikkal: From being in & out of hospital in 2022 to making his Test debut"
+      link: "Devdutt Padikkal: From being in & out of hospital in 2022 to making his Test debut"
     },
     {
-      link:"Laapataa Ladies: Of lost women and women we lose every day"
+      link: "Laapataa Ladies: Of lost women and women we lose every day"
     }
   ];
+  navigate_detial(news_title: any, desc: any, cont: any, src: any) {
+    localStorage.setItem('news_title', news_title);
+    localStorage.setItem('desc', desc);
+    localStorage.setItem('cont', cont);
+    localStorage.setItem('src', src);
+    // localStorage.setItem('cat_title',cat_title);
+    this.router.navigate(['/detail-page'])
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
 }

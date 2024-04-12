@@ -17,10 +17,10 @@ import { NewsCategoryComponent } from './home/news-category/news-category.compon
 import { ShortNewsComponent } from './home/short-news/short-news.component';
 import { MainNewsComponent } from './home/main-news/main-news.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
-import { TrendingNewsComponent } from './category-page/trending-news/trending-news.component';
-import { DetailListComponent } from './category-page/detail-list/detail-list.component';
-import { ExclusiveNewsComponent } from './category-page/exclusive-news/exclusive-news.component';
-import { MoreNewsComponent } from './category-page/more-news/more-news.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailPageComponent } from './detail-page/detail-page.component';
+import { CategoryListComponent } from './category-list/category-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,10 +34,8 @@ import { MoreNewsComponent } from './category-page/more-news/more-news.component
     ShortNewsComponent,
     MainNewsComponent,
     CategoryPageComponent,
-    TrendingNewsComponent,
-    DetailListComponent,
-    ExclusiveNewsComponent,
-    MoreNewsComponent
+    DetailPageComponent,
+    CategoryListComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,8 +43,22 @@ import { MoreNewsComponent } from './category-page/more-news/more-news.component
     NgbModule,
     BrowserAnimationsModule,
     RouterModule,
-    CarouselModule 
-  ],
+    CarouselModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+
+      {
+        path:'detail-page',
+        component:DetailPageComponent
+      }
+
+  ], {
+
+      onSameUrlNavigation: 'reload'
+
+  })
+
+],
   providers: [],
   bootstrap: [AppComponent]
 })

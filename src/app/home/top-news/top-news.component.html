@@ -3,12 +3,12 @@
         <div class="col-lg-8">
             <div class="mn-content mb-3 p-3">
                 <div class="row">
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-4 mb-3" *ngFor="let x of data_of_news">
+                    <div class="col-12 col-sm-6 col-md-6 col-xl-4 mb-3" *ngFor="let x of news_data_arr_3">
                         <div class="mn-item">
                             <div class="mn-img">
-                                <img src="{{x.url}}"
+                                <img [src]="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
                                     alt="news" height="171px" width="100%">
-                                <div class="mn-title"><a class="mn-link" href="#">{{x.title}}</a>
+                                <div class="mn-title"><a class="mn-link" (click)="navigate_detial(x.title, x.description, x.content, x.urlToImage)">{{x.title}}</a>
                                 </div>
                             </div>
                         </div>
@@ -20,7 +20,7 @@
             <div class="read-more p-3">
                 <p class="rm-heading">Read More</p>
                 <ul class="rm-list">
-                    <li class="rm-item" *ngFor="let y of useful_news"><a href="" class="rm-link">{{y.link}}</a></li>
+                    <li class="rm-item" *ngFor="let y of news_data_arr_2"><a (click)="navigate_detial(y.title, y.description, y.content, y.urlToImage)" class="rm-link">{{y.title}}</a></li>
                 </ul>
             </div>
         </div>

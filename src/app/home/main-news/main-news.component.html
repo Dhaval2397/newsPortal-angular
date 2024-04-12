@@ -4,17 +4,34 @@
         <div class="col-lg-6">
             <div class="top-news-left mb-3">
                 <ngb-carousel>
-                    <ng-template ngbSlide *ngFor="let y of images">
+                    <ng-template ngbSlide *ngFor="let y of us_data_arr_1">
                         <div class="wrapper tn-img">
-                            <img src="{{y.url}}" alt="Random first slide" height="500px">
+                            <img [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='" alt="Random first slide" height="500px">
                             <div class="tn-title">
-                                <a href="">{{y.title}}</a>
+                                <a (click)="navigate_detial(y.title, y.description, y.content, y.urlToImage)">{{y.title}}</a>
                             </div>
                         </div>
                     </ng-template>
                 </ngb-carousel>
             </div>
-            <!-- <div class="item">
+        </div>
+        <div class="col-lg-6">
+            <div class="top-news-right mb-3 h-100">
+                <div class="row">
+                    <div class="col-sm-6" *ngFor="let x of news_data_arr_1">
+                        <div class="tn-img">
+                            <img [src]="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='" alt="news" height="240px" width="100%">
+                            <div class="tn-title">
+                                <a (click)="navigate_detial(x.title,x.description, x.content, x.urlToImage)">{{x.title}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="item">
                 <div class="tn-img">
                     <img src="https://www.livemint.com/lm-img/img/2024/03/05/600x338/UAE-POLITICS-SUMMIT-43_1709621340111_1709621364597.jpg"
                         height="410px" max-width="100%" />
@@ -44,21 +61,3 @@
                     </div>
                 </div>
             </div> -->
-        </div>
-        <div class="col-lg-6">
-            <div class="top-news-right mb-3 h-100">
-                <div class="row">
-                    <div class="col-sm-6" *ngFor="let x of data_of_news">
-                        <div class="tn-img">
-                            <img src="{{x.url}}" alt="news" height="240px" width="100%">
-                            <div class="tn-title">
-                                <a href="">{{x.title}}</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>

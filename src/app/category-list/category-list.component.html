@@ -1,0 +1,10 @@
+<div class="home-page-content">
+<button (click)="scrollLeft()" [hidden]="!showPrevButton"><i class="fa-solid fa-angles-left"></i></button>
+<div class="category-list-wrapper" (scroll)="onScroll($event)">
+    <ul class="d-flex category-list" style="list-style: none;">
+        <li #cat_item class="category-item text-nowrap" *ngFor="let title of categories"
+            (click)="navigate(cat_item.textContent)"><a>{{title}}</a></li>
+    </ul>
+</div>
+<button (click)="scrollRight()" [hidden]="!showNextButton"><i class="fa-solid fa-angles-right"></i></button>
+</div>

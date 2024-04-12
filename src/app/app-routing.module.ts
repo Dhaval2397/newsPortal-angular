@@ -4,13 +4,11 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
-import { FeaturedNewsComponent } from './home/short-news/featured-news/featured-news.component';
-import { LatestNewsComponent } from './home/short-news/latest-news/latest-news.component';
-import { PopularNewsComponent } from './home/short-news/popular-news/popular-news.component';
-
+import { DetailPageComponent } from './detail-page/detail-page.component';
 const routes: Routes = [
+  
   {
-    path:'xy',
+    path:'category/:title',
     component:CategoryPageComponent,
   },
   {
@@ -22,24 +20,13 @@ const routes: Routes = [
     component:ContactComponent,
   },
   {
+    path:'home',
+    component:HomeComponent,
+  },
+  {
     path:'',
     component:HomeComponent,
-    children:[
-      {
-        path:'',
-        component:FeaturedNewsComponent,
-      },
-      {
-        path:'latest-news',
-        component:LatestNewsComponent,
-      },
-      {
-        path:'popular-news',
-        component:PopularNewsComponent,
-      }
-    ]
-  },
-  
+  }
 ];
 
 @NgModule({
