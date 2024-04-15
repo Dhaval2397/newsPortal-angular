@@ -6,7 +6,7 @@
                 <ngb-carousel>
                     <ng-template ngbSlide *ngFor="let y of us_data_arr_1">
                         <div class="wrapper tn-img">
-                            <img [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='" alt="Random first slide" height="500px">
+                            <img [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='" alt="Random first slide" height="500px" width="100%">
                             <div class="tn-title">
                                 <a (click)="navigate_detial(y.title, y.description, y.content, y.urlToImage)">{{y.title}}</a>
                             </div>

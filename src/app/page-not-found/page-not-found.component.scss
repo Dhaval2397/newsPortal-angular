@@ -1,0 +1,19 @@
+.page-not-found{
+    margin-top: 10px;
+    height: 100vh;
+    width: 100wh;
+    // background-color: azure;
+    .error-code{
+        font-size: 70px;
+        font-weight: bolder;
+        color: #a52a2a
+    }
+    .error-msg{
+        font-size: 30px;
+        font-weight: 600;
+        color: #a52a2a;
+    }
+    .erroe-text{
+        // color: #4e4b66;
+    }
+}

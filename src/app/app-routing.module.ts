@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { DetailPageComponent } from './detail-page/detail-page.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 const routes: Routes = [
   
   {
@@ -26,6 +27,14 @@ const routes: Routes = [
   {
     path:'',
     component:HomeComponent,
+  },
+  {
+    path:'detail-page',
+    component:DetailPageComponent,
+  },
+  {
+    path:'**',
+    component:PageNotFoundComponent
   }
 ];
 

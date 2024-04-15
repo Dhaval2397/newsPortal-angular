@@ -11,6 +11,7 @@ export class FooterComponent {
   navigate(data:any){
     localStorage.setItem('title',data);
     this.router.navigate(['/category', data.toLowerCase().replace(/\s+/g, '-')]);
+    
     window.scroll({ 
       top: 0, 
       left: 0, 

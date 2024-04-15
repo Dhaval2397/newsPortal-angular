@@ -1,3 +1,89 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
+<div class="header">
+    <nav class="navbar fixed-top navbar-expand-lg news-navbar">
+        <div class="container-fluid d-flex align-items-center">
+            <div>
+                <a class="navbar-brand" href="#"><img
+                        src="https://seeklogo.com/images/R/record-news-logo-C12FB64A7F-seeklogo.com.png?v=638252763370000000"
+                        alt="logo" height="50px" width="50px"></a>
+            </div>
+            <button class="navbar-toggler nav-toogle-btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center ms-0" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-1">
+                        <a class="nav-link" aria-current="page" routerLink="home">Home</a>
+                    </li>
+                    <!-- <li class="nav-item me-1">
+                        <a class="nav-link" routerLink="categories">News</a>
+                    </li> -->
+                    <li class="nav-item me-1">
+                        <a class="nav-link" (click)="aboutus()">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="contactus()">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control nav-search me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- <app-category-list></app-category-list> -->
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<!-- <app-footer></app-footer> -->
+<div class="footer container-fluid mt-4">
+    <div class="p-2 footer-detail  container-lg">
+        <div class="footer-inner">
+            <div class="mb-3">
+                <div class="footer-item ms-md-0">
+                    <p class="item-title mb-2">Get in Touch</p>
+                    <div class="contact-info d-flex flex-column ms-1">
+                        <p class="info my-1 text-decoration-none" href="https://maps.app.goo.gl/DELYjoMjmZHyR2HW6"><i class="fa fa-map-marker me-1"></i>208, Elite
+                            Complex, Sola</p>
+                        <a class="info text-decoration-none my-1"  href="mailto:info@example.com"><i
+                                class="fa fa-envelope me-1"></i>info&#64;example.com</a>
+                        <a class="info text-decoration-none my-1"><i class="fa fa-phone me-1"></i>+123-456-7890</a>
+                        <div class="social d-flex">
+                            <a href="" class="me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="" class="me-2"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="" class="me-2"><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="footer-item">
+                    <p class="item-title mb-1">Useful Links</p>
+                    <ul class="ms-3 mb-0">
+                        <li><a #latest (click)=" navigate(latest.textContent)">Latest News</a></li>
+                        <li><a #trending (click)=" navigate(trending.textContent)">Trending News</a></li>
+                        <li><a #popular (click)=" navigate(popular.textContent)">Popular News</a></li>
+                        <li><a #featured (click)=" navigate(featured.textContent)">Featured News</a></li>
+                        <li><a #mostViewed (click)=" navigate(mostViewed.textContent)">Most Viewed</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="footer-item">
+                    <p class="item-title mb-1">Category</p>
+                    <ul class="ms-3">
+                        <li><a #enter (click)=" navigate(enter.textContent)">Entertainment</a></li>
+                        <li><a #politics (click)=" navigate(politics.textContent)">Politics</a></li>
+                        <li><a #bollywood (click)=" navigate(bollywood.textContent)">Boolywood</a></li>
+                        <li><a #health (click)=" navigate(health.textContent)">Health And Wellness</a></li>
+                        <li><a #edu (click)=" navigate(edu.textContent)">Education News</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

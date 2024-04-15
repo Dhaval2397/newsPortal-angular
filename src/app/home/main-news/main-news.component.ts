@@ -10,16 +10,20 @@ import { Route, Router } from '@angular/router';
 export class MainNewsComponent {
   name = 'Angular ' + VERSION.major;
 
-  images = [{ url: "https://www.livemint.com/lm-img/img/2024/03/05/600x338/UAE-POLITICS-SUMMIT-43_1709621340111_1709621364597.jpg", title: 'No Indian troops to remain in Maldives, not even in civilian clothing,’ says president Mohamed Muizzu' },
-  { url: "https://www.hindustantimes.com/ht-img/img/2024/03/07/550x309/INDIA-KASHMIR-MODI_1709771668888_1709771669405.JPG", title: 'Modi in Kashmir: Srinagar stadium draped in tricolour; Omar Abdullah"s big claim' },
-  { url: "https://static.toiimg.com/thumb/msid-108285130,imgsize-692167,width-400,height-225,resizemode-72/108285130.jpg", title: 'Bengaluru water crisis: Whitefield companies brace for impact, Peenya industries face production cut' },];
+  // images = [{ url: "https://www.livemint.com/lm-img/img/2024/03/05/600x338/UAE-POLITICS-SUMMIT-43_1709621340111_1709621364597.jpg", title: 'No Indian troops to remain in Maldives, not even in civilian clothing,’ says president Mohamed Muizzu' },
+  // { url: "https://www.hindustantimes.com/ht-img/img/2024/03/07/550x309/INDIA-KASHMIR-MODI_1709771668888_1709771669405.JPG", title: 'Modi in Kashmir: Srinagar stadium draped in tricolour; Omar Abdullah"s big claim' },
+  // { url: "https://static.toiimg.com/thumb/msid-108285130,imgsize-692167,width-400,height-225,resizemode-72/108285130.jpg", title: 'Bengaluru water crisis: Whitefield companies brace for impact, Peenya industries face production cut' },];
   news_data_arr_1: any;
   us_data_arr_1: any;
   uk_data_arr_1: any;
   internation_news_arr: any;
   // router: any;
 
-  constructor(config: NgbCarouselConfig, private news_data: ApiServicesService, private us_data: ApiServicesService, private uk_data: ApiServicesService, private router:Router) {
+  constructor(config: NgbCarouselConfig, 
+              private news_data: ApiServicesService, 
+              private us_data: ApiServicesService, 
+              private uk_data: ApiServicesService, 
+              private router:Router) {
     // customize default values of carousels used by this component tree
     config.interval = 10000;
     config.keyboard = true;

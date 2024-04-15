@@ -23,14 +23,21 @@ export class CategoryPageComponent implements OnInit {
   technology_data_arr_1: any;
   technology_data_arr_2: any;
   technology_data_arr_3: any;
-  titleList: any;
   science_data_arr_1:any;
   science_data_arr_2:any;
   science_data_arr_3:any;
   health_data_arr_1:any;
   health_data_arr_2:any;
   health_data_arr_3:any;
-  constructor(private sport_data: ApiServicesService, private news_data: ApiServicesService, bussiness_data: ApiServicesService, private entertainment_data: ApiServicesService, private technology_data: ApiServicesService, private router: Router, private elementRef: ElementRef, private science_data:ApiServicesService, private health_data:ApiServicesService) {
+  constructor(private sport_data: ApiServicesService, 
+              private news_data: ApiServicesService, 
+              private bussiness_data: ApiServicesService, 
+              private entertainment_data: ApiServicesService, 
+              private technology_data: ApiServicesService, 
+              private router: Router, 
+              private elementRef: ElementRef, 
+              private science_data:ApiServicesService, 
+              private health_data:ApiServicesService) {
     sport_data.getsportdata().subscribe((data: any) => {
       this.sport_data_arr_1 = data.articles;
       this.sport_data_arr_1 = this.sport_data_arr_1.slice(1, 6);

@@ -19,7 +19,12 @@ export class DetailPageComponent implements OnInit {
   news_data_arr_5: any;
   news_data_arr_6: any;
   // img: any;
-  constructor(private sport_data: ApiServicesService, private news_data: ApiServicesService, bussiness_data: ApiServicesService, private entertainment_data: ApiServicesService, private technology_data: ApiServicesService, private router: Router) {
+  constructor(private sport_data: ApiServicesService, 
+              private news_data: ApiServicesService, 
+              private bussiness_data: ApiServicesService, 
+              private entertainment_data: ApiServicesService, 
+              private technology_data: ApiServicesService, 
+              private router: Router) {
     news_data.getnewsdata().subscribe((data: any) => {
       this.news_data_arr_1 = data.articles;
       this.news_data_arr_1 = this.news_data_arr_1.slice(1, 3);

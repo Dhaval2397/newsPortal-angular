@@ -6,7 +6,16 @@ import { Injectable } from '@angular/core';
 })
 export class ApiServicesService {
 
-  constructor(private sport_api: HttpClient, private news_api_1: HttpClient, private bussiness_api: HttpClient, private news_api_2: HttpClient, private entertaiment_api: HttpClient, private technology_api: HttpClient, private usnews_api: HttpClient, private uknews_api: HttpClient, private science_api:HttpClient, private health_api:HttpClient) { }
+  constructor(private sport_api: HttpClient, 
+              private news_api_1: HttpClient, 
+              private bussiness_api: HttpClient, 
+              private news_api_2: HttpClient, 
+              private entertaiment_api: HttpClient, 
+              private technology_api: HttpClient, 
+              private usnews_api: HttpClient, 
+              private uknews_api: HttpClient, 
+              private science_api:HttpClient, 
+              private health_api:HttpClient) { }
   getsportdata() {
     return this.sport_api.get('https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=c9d63f32f5a547a38759337bba75acba');
     // return this.sport_api.get('https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=088e34a35b8742ceb592bfe1b924304d');

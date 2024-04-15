@@ -14,7 +14,12 @@ export class NewsCategoryComponent {
   bussiness_data_arr_1: any;
   entertainment_data_arr_1: any;
   technology_data_arr_1: any;
-  constructor(confi: NgbCarouselConfig, private router:Router, private sport_data:ApiServicesService, private bussiness_data:ApiServicesService, private entertainment_data:ApiServicesService, private technology_data:ApiServicesService) {
+  constructor(confi: NgbCarouselConfig, 
+              private router:Router, 
+              private sport_data:ApiServicesService, 
+              private bussiness_data:ApiServicesService, 
+              private entertainment_data:ApiServicesService, 
+              private technology_data:ApiServicesService) {
     // customize default values of carousels used by this component tree
     confi.interval = 0;
     confi.keyboard = true;

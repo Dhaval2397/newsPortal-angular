@@ -20,6 +20,7 @@ import { CategoryPageComponent } from './category-page/category-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailPageComponent } from './detail-page/detail-page.component';
 import { CategoryListComponent } from './category-list/category-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CategoryListComponent } from './category-list/category-list.component';
     CategoryPageComponent,
     DetailPageComponent,
     CategoryListComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
