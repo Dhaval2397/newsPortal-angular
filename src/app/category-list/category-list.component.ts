@@ -8,10 +8,9 @@ import { Router } from '@angular/router';
 })
 export class CategoryListComponent {
   categories = [
-    'Sport', 'Entertainment', 'Business','Science', 'Bollywood', 'Politic', 'Education', 'Web Series',
+    'Sport', 'Entertainment', 'Business','Politics','Science', 'Bollywood', 'Education', 'Web Series',
     'Health & Wellness', 'Prices', 'Currencies', 'Lifestyle', 'Technology', 'Trending',
-    'Food', 'Robotics', 'Art & Craft', 'Arcitructure', 'Defence'
-  ];
+    'Food', 'Robotics', 'Art & Craft', 'Arcitructure', 'Defence'];
   showPrevButton = false;
   showNextButton = true;
   scrollAmount = 200; // Adjust this value as needed
@@ -33,6 +32,7 @@ export class CategoryListComponent {
     const container = this.elementRef.nativeElement.querySelector('.category-list-wrapper');
     container.scrollTo({ left: container.scrollLeft + this.scrollAmount, behavior: 'smooth' });
   }
+
   navigate(data:any){
     // console.log('yha aaya hai');
     localStorage.setItem('title',data);

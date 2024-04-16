@@ -169,7 +169,7 @@ export class CategoryPageComponent implements OnInit {
     });
   }
   categories = [
-    'Sport', 'Entertainment', 'Business', 'Science', 'Technology', 'Bollywood', 'Politic', 'Education', 'Web Series',
+    'Sport', 'Entertainment', 'Business', 'Science', 'Technology', 'Bollywood', 'Politics', 'Education', 'Web Series',
     'Health & Wellness', 'Prices', 'Currencies', 'Lifestyle', 'Trending',
     'Food', 'Robotics', 'Art & Craft', 'Arcitructure', 'Defence'];
   showPrevButton = false;
