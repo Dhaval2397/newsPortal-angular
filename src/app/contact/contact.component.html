@@ -7,19 +7,19 @@
                     <form>
                         <div class="row mb-2">
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control contact-info" placeholder="Your Name" />
+                                <input type="text" class="form-control contact-info" placeholder="Your Name" [(ngModel)]="contactDetailsObject.name" name="name" />
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="email" class="form-control contact-info" placeholder="Your Email" />
+                                <input type="email" class="form-control contact-info" placeholder="Your Email" [(ngModel)]="contactDetailsObject.email" name="email"/>
                             </div>
                         </div>
                         <div class="form-group mb-2">
-                            <input type="text" class="form-control contact-info" placeholder="Subject" />
+                            <input type="text" class="form-control contact-info" placeholder="Subject" [(ngModel)]="contactDetailsObject.subject" name="subject"/>
                         </div>
                         <div class="form-group mb-2">
-                            <textarea class="form-control contact-info" rows="5" placeholder="Message"></textarea>
+                            <textarea class="form-control contact-info" rows="5" placeholder="Message" [(ngModel)]="contactDetailsObject.message" name="message"></textarea>
                         </div>
-                        <button class="btn send-btn" type="submit">Send Message</button>
+                        <button class="btn send-btn" type="submit" (click)="getContact()">Send Message</button>
                     </form>
                 </div>
             </div>

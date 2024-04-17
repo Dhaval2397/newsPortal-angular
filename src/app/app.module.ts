@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetailPageComponent } from './detail-page/detail-page.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     DetailPageComponent,
     CategoryListComponent,
     PageNotFoundComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     RouterModule,
     CarouselModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
 
       {

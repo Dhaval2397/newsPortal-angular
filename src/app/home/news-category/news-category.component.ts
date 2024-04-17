@@ -14,6 +14,7 @@ export class NewsCategoryComponent {
   bussiness_data_arr_1: any;
   entertainment_data_arr_1: any;
   technology_data_arr_1: any;
+searchText: any;
   constructor(confi: NgbCarouselConfig, 
               private router:Router, 
               private sport_data:ApiServicesService, 

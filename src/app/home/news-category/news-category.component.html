@@ -7,7 +7,7 @@
                 </div>
                 <div class="news-category-list p-3">
                     <ngb-carousel>
-                        <ng-template ngbSlide data-interval="false" *ngFor="let a of sport_data_arr_1">
+                        <ng-template ngbSlide data-interval="false" *ngFor="let a of sport_data_arr_1 | filter:searchText ">
                             <div class="card tn-img p-1 h-100">
                                 <img [src]="a.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
                                 class="card-img-top" alt="news-img" height="250px">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="news-category-list p-3 h-100">
                     <ngb-carousel>
-                        <ng-template ngbSlide data-interval="false" *ngFor="let b of bussiness_data_arr_1">
+                        <ng-template ngbSlide data-interval="false" *ngFor="let b of bussiness_data_arr_1 | filter:searchText ">
                             <div class="card tn-img p-1 h-100">
                                 <img [src]="b.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
                                 class="card-img-top" alt="news-img" height="250px">

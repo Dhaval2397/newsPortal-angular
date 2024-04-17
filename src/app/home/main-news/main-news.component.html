@@ -4,7 +4,7 @@
         <div class="col-lg-6">
             <div class="top-news-left mb-3">
                 <ngb-carousel>
-                    <ng-template ngbSlide *ngFor="let y of us_data_arr_1">
+                    <ng-template ngbSlide *ngFor="let y of us_data_arr_1 | filter:searchText ">
                         <div class="wrapper tn-img">
                             <img [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='" alt="Random first slide" height="500px" width="100%">
                             <div class="tn-title">
@@ -18,7 +18,7 @@
         <div class="col-lg-6">
             <div class="top-news-right mb-3 h-100">
                 <div class="row">
-                    <div class="col-sm-6" *ngFor="let x of news_data_arr_1">
+                    <div class="col-sm-6" *ngFor="let x of news_data_arr_1 | filter:searchText ">
                         <div class="tn-img">
                             <img [src]="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='" alt="news" height="240px" width="100%">
                             <div class="tn-title">

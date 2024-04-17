@@ -17,6 +17,7 @@ export class MainNewsComponent {
   us_data_arr_1: any;
   uk_data_arr_1: any;
   internation_news_arr: any;
+searchText: any;
   // router: any;
 
   constructor(config: NgbCarouselConfig, 

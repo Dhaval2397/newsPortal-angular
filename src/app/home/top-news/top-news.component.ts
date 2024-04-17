@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class TopNewsComponent {
   news_data_arr_3: any;
   news_data_arr_2: any;
+searchText: any;
   constructor(private news_data: ApiServicesService, private router:Router) {
     news_data.getnewsdata().subscribe((data: any) => {
       this.news_data_arr_3 = data.articles;

@@ -1,0 +1,43 @@
+{
+  "locations": [
+    {
+      "resul": true,
+      "message": "Details Added Successful"
+    },
+    {
+      "id": "9a02",
+      "name": "dv",
+      "email": "dv",
+      "subject": "",
+      "message": ""
+    },
+    {
+      "id": "378c",
+      "name": "dv",
+      "email": "dv@gmail.com",
+      "subject": "xyz",
+      "message": "aaaaaaaaaa"
+    },
+    {
+      "id": "e824",
+      "name": "dvs",
+      "email": "dvs@gmail.com",
+      "subject": "xyzs",
+      "message": "aaaaaaaaaas"
+    },
+    {
+      "id": "6e31",
+      "name": "ss",
+      "email": "ss@gmail.com",
+      "subject": "aaa",
+      "message": "aaaaaa"
+    },
+    {
+      "id": "dcdd",
+      "name": "ss",
+      "email": "ss@gmail.com",
+      "subject": "xz",
+      "message": "qqqqqq"
+    }
+  ]
+}

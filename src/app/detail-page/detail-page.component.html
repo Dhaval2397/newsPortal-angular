@@ -25,7 +25,7 @@
                         </ng-template> -->
                         <div class="card-body">
                             <a (click)="navigate(x.title, x.description, x.content, x.urlToImage)"
-                                class="card-text">{{x.title}}</a>
+                                class="card-text" | filter:searchText>{{x.title}}</a>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         </ng-template> -->
                         <div class="card-body">
                             <a (click)="navigate(y.title, y.description, y.content, y.urlToImage)"
-                                class="card-text">{{y.title}}</a>
+                                class="card-text" | filter:searchText>{{y.title}}</a>
                         </div>
                     </div>
                 </div>
