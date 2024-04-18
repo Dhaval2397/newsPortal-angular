@@ -1,42 +1,49 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit {
-  constructor(private http:HttpClient){}
-  // studentObj: Student = new Student();
-
-  contactDetailsObject:any={
-    "name":"",
-    "email":"",
-    "subject":"",
-    "message":"",
+  contactForm: FormGroup;
+  constructor(private http: HttpClient, private formBuilder: FormBuilder) {
+    this.contactForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      subject: ['', Validators.required],
+      message: ['', Validators.required]
+    });
   }
-  getContact(){
+  hasError(controlName: string, errorName: string) {
+    const control = this.contactForm.get(controlName);
+    return control?.hasError(errorName) && control?.touched;
+  }
+  contactDetailsObject: any = {
+    // "id": 1,
+    "name": "",
+    "email": "",
+    "subject": "",
+    "message": "",
+  }
+  display = "d-none"
+  getContact() {
     debugger;
-    this.http.post("http://localhost:3000/locations", this.contactDetailsObject).subscribe((res:any)=>{
-     alert("data saved succefully") 
-    //  "name":"",
-    this.contactDetailsObject.name="";
-    this.contactDetailsObject.email="";
-    this.contactDetailsObject.subject="";
-    this.contactDetailsObject.message="";
-    // "email":"",
-    // "subject":"",
-    // "message":""
-    })
+    if (this.contactForm.valid) {
+      this.http.post("http://localhost:3000/locations", this.contactDetailsObject).subscribe((res: any) => {
+        this.contactDetailsObject.name = ""
+        this.contactDetailsObject.email = "";
+        this.contactDetailsObject.subject = "";
+        this.contactDetailsObject.message = "";
+        this.display = "d-block";
+        setTimeout(() => {
+          this.display = "d-none"
+        }, 5000);
+      })
+    }
   }
-
   ngOnInit(): void {
-    // this.getContact();
-    // throw new Error('Method not implemented.');
   }
-
-}
-function res(value: Object): void {
-  throw new Error('Function not implemented.');
 }
 

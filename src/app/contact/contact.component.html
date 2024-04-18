@@ -4,24 +4,85 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="contact-form">
-                    <form>
+                    <form [formGroup]="contactForm" (ngSubmit)="getContact()">
                         <div class="row mb-2">
-                            <div class="form-group col-md-6">
-                                <input type="text" class="form-control contact-info" placeholder="Your Name" [(ngModel)]="contactDetailsObject.name" name="name" />
-                            </div>
-                            <div class="form-group col-md-6">
-                                <input type="email" class="form-control contact-info" placeholder="Your Email" [(ngModel)]="contactDetailsObject.email" name="email"/>
-                            </div>
+                          <div class="form-group col-md-6">
+                            <input type="text" class="form-control contact-info" placeholder="Your Name" formControlName="name" [(ngModel)]="contactDetailsObject.name" />
+                            <div *ngIf="hasError('name', 'required')" class="text-danger">Name is required.</div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <input type="email" class="form-control contact-info" placeholder="Your Email" formControlName="email" [(ngModel)]="contactDetailsObject.email"/>
+                            <div *ngIf="hasError('email', 'required')" class="text-danger">Email is required.</div>
+                            <div *ngIf="hasError('email', 'email')" class="text-danger">Please enter a valid email address.</div>
+                          </div>
                         </div>
                         <div class="form-group mb-2">
-                            <input type="text" class="form-control contact-info" placeholder="Subject" [(ngModel)]="contactDetailsObject.subject" name="subject"/>
+                          <input type="text" class="form-control contact-info" placeholder="Subject" formControlName="subject" [(ngModel)]="contactDetailsObject.subject"/>
+                          <div *ngIf="hasError('subject', 'required')" class="text-danger">Subject is required.</div>
                         </div>
                         <div class="form-group mb-2">
-                            <textarea class="form-control contact-info" rows="5" placeholder="Message" [(ngModel)]="contactDetailsObject.message" name="message"></textarea>
+                          <textarea class="form-control contact-info" rows="5" placeholder="Message" formControlName="message" [(ngModel)]="contactDetailsObject.message"></textarea>
+                          <div *ngIf="hasError('message', 'required')" class="text-danger">Message is required.</div>
                         </div>
-                        <button class="btn send-btn" type="submit" (click)="getContact()">Send Message</button>
-                    </form>
+                        <button class="btn send-btn" type="submit" [disabled]="!contactForm.valid">Send Message</button>
+                        <!-- <button class="btn send-btn" type="submit">Send Message</button> -->
+                      </form>
+                      
+                      
+                    <!-- <form #userName="ngForm"><button class="btn send-btn" type="submit" [disabled]="!contactForm.valid">Send Message</button>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <div class="form-group">
+                                    <input type="text" class="form-control contact-info" placeholder="Your Name"
+                                        #name_val="ngModel" pattern="^((?!admin).)*$"
+                                        [(ngModel)]="contactDetailsObject.name"
+                                        [class.is-invalid]="name_val.invalid && name_val.touched" name="name" />
+                                </div>
+                                <div *ngIf="name_val.errors && (name_val.invalid || name_val.touched)">
+                                    <small class="text-danger" *ngIf="name_val.errors?.['required']">Name Is
+                                        Required</small>
+                                    <small class="text-danger" *ngIf="name_val.errors?.['pattern']">This Name is not
+                                        valid</small>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="form-group">
+                                    <input type="email" class="form-control contact-info" placeholder="Your Email"
+                                        #mail="ngModel"
+                                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
+                                        [class.is-invalid]="mail.invalid && mail.touched"
+                                        [(ngModel)]="contactDetailsObject.email" name="email" />
+                                    <div *ngIf="mail.errors && (mail.invalid || mail.untouched)">
+                                        <small class="text-danger" *ngIf="mail.errors?.['required']">Email Is
+                                            Required</small>
+                                        <small class="text-danger" *ngIf="mail.errors?.['pattern']">Please Enter Valid
+                                            Email</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="form-group">
+                                    <input type="text" class="form-control contact-info" placeholder="Subject" #subject="ngModel"
+                                        [(ngModel)]="contactDetailsObject.subject" name="subject" minlength="3" [class.is-invalid]="subject.invalid && subject.touched" />
+                                        <div *ngIf="subject.errors && (subject.invalid || subject.untouched)">
+                                            <small class="text-danger" *ngIf="subject.errors?.['required']">Subject Is Required</small>
+                                            <small class="text-danger" *ngIf="subject.errors?.['minlength']">Subject Must Be greater than 3 Character</small>
+                                        </div>
+                                
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="form-group">
+                                    <textarea class="form-control contact-info" rows="5" placeholder="Message"
+                                        [(ngModel)]="contactDetailsObject.message" name="message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn send-btn" type="submit" [disabled]="userName.form.invalid" (click)="getContact()" >Send Message</button>
+                    </form> -->
                 </div>
+                <span class="text-success" #notificartion [class]="display">Message Sent Successfully</span>
             </div>
             <div class="col-md-4">
                 <div class="contact-info ms-3">
