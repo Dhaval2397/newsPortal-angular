@@ -1,17 +1,5 @@
 {
-  "locations": [
-    {
-      "resul": true,
-      "message": "Details Added Successful",
-      "id": "b313"
-    },
-    {
-      "id": "9a02",
-      "name": "dv",
-      "email": "dv",
-      "subject": "",
-      "message": ""
-    },
+  "contactdetails": [
     {
       "id": "378c",
       "name": "dv",
@@ -48,13 +36,6 @@
       "message": "wwwwwwww"
     },
     {
-      "id": "da69",
-      "name": "ww",
-      "email": "ww@",
-      "subject": "",
-      "message": ""
-    },
-    {
       "id": "8b7b",
       "name": "ww",
       "email": "dpcl2397@gmail.com",
@@ -77,52 +58,10 @@
     },
     {
       "id": "",
-      "name": "www",
-      "email": "www",
-      "subject": "www",
-      "message": "www"
-    },
-    {
-      "id": "",
-      "name": "ww",
-      "email": "www",
-      "subject": "ww",
-      "message": "ww"
-    },
-    {
-      "id": "",
       "name": "Patel Dhavalkumar Dineshkumar",
       "email": "dpcl2397@gmail.com",
       "subject": "ee",
       "message": "eeeee"
-    },
-    {
-      "id": "",
-      "name": "ad",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": null,
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": null,
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
     },
     {
       "id": null,
@@ -153,132 +92,6 @@
       "message": "aaaaa"
     },
     {
-      "id": "901c",
-      "name": "admin",
-      "email": "s",
-      "subject": "ss",
-      "message": "ss"
-    },
-    {
-      "id": "1af1",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "d31d",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "5fb3",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
       "id": "645a",
       "name": "as",
       "email": "ss@gmail.com",
@@ -300,48 +113,6 @@
       "message": "aaaaaaa"
     },
     {
-      "id": "f5ee",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "ecb6",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "dd6c",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "761f",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "email": "",
-      "subject": "",
-      "message": ""
-    },
-    {
       "id": "f16c",
       "name": "Dhaval Patel",
       "email": "dpcl2397@gmail.com",
@@ -361,6 +132,20 @@
       "email": "ss@gmail.com",
       "subject": "ss",
       "message": "ssss"
+    },
+    {
+      "id": "f1fa",
+      "name": "dv",
+      "email": "dv@gmail.com",
+      "subject": "xyz",
+      "message": "ddddd"
+    },
+    {
+      "id": "3e63",
+      "name": "dv",
+      "email": "dv@gmail.com",
+      "subject": "aaa",
+      "message": "aaaaaaa"
     }
   ]
 }

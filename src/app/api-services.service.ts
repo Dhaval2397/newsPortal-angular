@@ -15,7 +15,8 @@ export class ApiServicesService {
               private usnews_api: HttpClient, 
               private uknews_api: HttpClient, 
               private science_api:HttpClient, 
-              private health_api:HttpClient) { }
+              private health_api:HttpClient,
+              private contactDetails:HttpClient) { }
   getsportdata() {
     return this.sport_api.get('https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=c9d63f32f5a547a38759337bba75acba');
     // return this.sport_api.get('https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=088e34a35b8742ceb592bfe1b924304d');
@@ -53,8 +54,9 @@ export class ApiServicesService {
   gethealthdata(){
     return this.health_api.get('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=c9d63f32f5a547a38759337bba75acba');
     // return this.health_api.get('https://newsapi.org/v2/top-headlines?country=gb&category=health&apiKey=088e34a35b8742ceb592bfe1b924304d');
-
   }
-
+  getcontactdata(){
+    return this.contactDetails.get('http://localhost:3000/contactdetails');
+  }
 }
 

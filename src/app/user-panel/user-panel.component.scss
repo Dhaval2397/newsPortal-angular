@@ -1,0 +1,251 @@
+/* styles.css or user.component.css */
+
+.notification {
+    
+    margin-top: 100px;
+  }
+  
+.header {
+
+    .news-navbar {
+        background: #a52a2a;
+
+        .nav-toogle-btn {
+            background-color: #faebd7;
+
+            span {
+                color: #a52a2a;
+            }
+        }
+
+        div {
+            ul {
+                li {
+                    margin-inline: 5px;
+
+                    a {
+                        color: #faebd7;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        border-radius: 8px;
+                        padding-inline: 15px;
+
+                        &:hover {
+                            // border-bottom: 2px solid #fff;
+                            color: #a52a2a;
+                            background-color: #faebd7;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+            }
+
+            form {
+                .form-control {
+                    &.nav-search {
+                        // background-color: #faebd7;
+                        border: 1px solid #cca1a1;
+                        box-shadow: unset;
+
+                        &::placeholder {
+                            // color: #a52a2a;
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 24px;
+                        }
+
+                        &:focus {
+                            box-shadow: none;
+                            border: 1px solid #faebd7;
+                        }
+                    }
+                }
+
+                button {
+                    // background-color:#3b4b58 ;
+                    background-color: #a52a2a;
+                    color: #faebd7;
+                    border: 2px solid #f8f8f8;
+
+                    &:hover {
+                        color: #a52a2a;
+                        border: 2px solid #a52a2a;
+                        background-color: #faebd7;
+                    }
+                }
+            }
+        }
+    }
+
+    .cat-list {
+        margin-top: 70px;
+        white-space: nowrap;
+
+        .cat-items {
+
+            overflow-x: hidden;
+
+            .cat-item {
+                display: inline;
+                margin-inline: 8px;
+            }
+        }
+    }
+}
+
+.header-shadow {
+    background-color: white;
+    box-shadow: 1px 0px 10px #000;
+}
+
+@media (max-width:991px) {
+    .news-navbar {
+        background-color: #a52a2a;
+
+        div {
+            text-align: center;
+
+            ul {
+                // width: max-content;
+                display: flex;
+                align-items: center;
+
+                li {
+                    width: 120px;
+
+                    a {
+                        color: #faebd7;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    // background: rgb(170,163,185);
+    background: #faebd7;
+
+
+
+
+    .footer-item {
+        .item-title {
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 30px;
+            color: #a52a2a;
+            // border-bottom: 5px double #aaa3b9;
+        }
+
+        .contact-info {
+            .info {
+                font-size: 18px;
+                font-weight: 400;
+                // line-height: 20px;
+                color: #4e4b66;
+                cursor: pointer;
+
+                &:hover {
+                    color: #a52a2a;
+                }
+
+                i {
+                    color: #a52a2a;
+                }
+            }
+
+            .social {
+                a {
+                    margin-top: 10px;
+                    background-color: #a52a2a;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+
+                    i {
+                        color: #fff;
+                        font-size: 18px;
+                    }
+
+                    &:hover {
+                        background-color: #a52a2a;
+
+                        i {
+                            color: #f8d5d5;
+                        }
+                    }
+                }
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 5px;
+            margin-left: 15px;
+
+            li {
+                position: relative;
+                white-space: wrap;
+
+                &::before {
+                    position: absolute;
+                    content: '\f061';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    /* color: #145da0; */
+                    color: #a52a2a;
+                    left: -18px;
+                    top: 2px;
+
+                }
+
+                a {
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: 400;
+                    // color: #0c2d48;
+                    color: #4e4b66;
+                    white-space: wrap;
+                    word-break: break-all;
+
+                    &:hover {
+                        color: #a52a2a;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (min-width:615px) {
+    .footer-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width:615px) {
+    .footer-inner {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+    }
+
+    .footer .footer-detail {
+        display: flex;
+        justify-content: center;
+    }
+
+}

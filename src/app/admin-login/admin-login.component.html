@@ -1,0 +1,47 @@
+<!-- <p>admin-login works!</p> -->
+<div class="container">
+    <div class="login-wrapper">
+        <div>
+            <div class="login-form py-5 px-3 my-5">
+                <div class="text-center mb-5">
+                    <p class="login-text">Admin Login</p>
+                </div>     
+                <form [formGroup]="loginForm" (ngSubmit)="submitForm(mail.value, pass.value)">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label login-label">Email address</label>
+                      <input type="email" class="form-control" #mail aria-describedby="emailHelp"
+                        placeholder="Enter Email" size="50"  formControlName="email" required>
+                        <div *ngIf="hasError('email', 'required')" class="text-danger">Email is required.</div>
+                        <div *ngIf="hasError('email', 'email')" class="text-danger">Please enter a valid email address.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label login-label">Password</label>
+                        <input type="password" class="form-control" #pass
+                          placeholder="Enter Password" size="50" formControlName="password">
+                        <div *ngIf="hasError('password', 'required')" class="text-danger">Password is required.</div>
+                        <div *ngIf="hasError('password', 'minlength')" class="text-danger">Password must be at least 8 characters long.</div>
+                    </div>
+                    <div class="text-center">
+                      <button type="submit" class="btn login-btn" [disabled]="!loginForm.valid">Submit</button>
+                    </div>
+                  </form>
+                               
+                <!-- <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label login-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter Email" size="50">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label login-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Enter Password" size="50">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn login-btn">Submit</button>
+                    </div>
+                </form> -->
+            </div>
+        </div>
+    </div>
+</div>

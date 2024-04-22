@@ -1,90 +1,130 @@
 <!-- <app-header></app-header> -->
-<div class="header">
-    <nav class="navbar fixed-top navbar-expand-lg news-navbar">
-        <div class="container-fluid d-flex align-items-center">
-            <div>
-                <a class="navbar-brand" href="#"><img
-                        src="https://seeklogo.com/images/R/record-news-logo-C12FB64A7F-seeklogo.com.png?v=638252763370000000"
-                        alt="logo" height="50px" width="50px"></a>
-            </div>
-            <button class="navbar-toggler nav-toogle-btn" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse text-center ms-0" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item me-1">
-                        <a class="nav-link" aria-current="page" routerLink="home">Home</a>
-                    </li>
-                    <!-- <li class="nav-item me-1">
-                        <a class="nav-link" routerLink="categories">News</a>
-                    </li> -->
-                    <li class="nav-item me-1">
-                        <a class="nav-link" (click)="aboutus()">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="contactus()">Contact Us</a>
-                    </li>
-                </ul>
-                <!-- <form class="d-flex">
-                    <input class="form-control nav-search me-2" [(ngModel)]="searchText" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn" type="submit">Search</button>
-                </form> -->
-            </div>
-        </div>
-    </nav>
-</div>
-<!-- <app-category-list></app-category-list> -->
-<router-outlet></router-outlet>
-<!-- <app-footer></app-footer> -->
-<div class="footer container-fluid mt-4">
-    <div class="p-2 footer-detail  container-lg">
-        <div class="footer-inner">
-            <div class="mb-3">
-                <div class="footer-item ms-md-0">
-                    <p class="item-title mb-2">Get in Touch</p>
-                    <div class="contact-info d-flex flex-column ms-1">
-                        <p class="info my-1 text-decoration-none" href="https://maps.app.goo.gl/DELYjoMjmZHyR2HW6"><i
-                                class="fa fa-map-marker me-1"></i>208, Elite
-                            Complex, Sola</p>
-                        <a class="info text-decoration-none my-1" href="mailto:info@example.com"><i
-                                class="fa fa-envelope me-1"></i>info&#64;example.com</a>
-                        <a class="info text-decoration-none my-1"><i class="fa fa-phone me-1"></i>+123-456-7890</a>
-                        <div class="social d-flex">
-                            <a href="" class="me-2"><i class="fab fa-twitter"></i></a>
-                            <a href="" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                            <a href="" class="me-2"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="" class="me-2"><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-youtube"></i></a>
+<!-- <p>admin-login works!</p> -->
+<div>
+    <div class="container">
+        <div class="login-wrapper">
+            <div *ngIf="loginform">
+                <div class="login-form py-5 px-3 my-4">
+                    <div class="d-flex justify-content-center">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active login-tab-link" id="user-tab" data-bs-toggle="tab"
+                                    data-bs-target="#user-tab-pane" type="button" role="tab"
+                                    aria-controls="user-tab-pane" aria-selected="true">Log in as User</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link login-tab-link" id="admin-tab" data-bs-toggle="tab"
+                                    data-bs-target="#admin-tab-pane" type="button" role="tab"
+                                    aria-controls="admin-tab-pane" aria-selected="false">Log in as Admin</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="user-tab-pane" role="tabpanel"
+                            aria-labelledby="user-tab" tabindex="0">
+                            <div class="text-center mb-5">
+                                <p class="login-text">User Login</p>
+                            </div>
+
+                            <form [formGroup]="userloginForm" (ngSubmit)="onSubmit(usermail.value,userpassword.value)">
+                                <div class="mb-3">
+                                    <label for="useremail" class="form-label login-label">Email address</label>
+                                    <input type="email" class="form-control" #usermail aria-describedby="emailHelp"
+                                        placeholder="Enter Email" size="50" formControlName="useremail">
+                                    <div *ngIf="hasError('useremail', 'required') || hasError('useremail', 'email')"
+                                        class="text-danger">
+                                        <small *ngIf="hasError('useremail', 'required')">Email is required.</small>
+                                        <small *ngIf="hasError('useremail', 'email')">Invalid email format.</small>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="userpassword" class="form-label login-label">Password</label>
+                                    <input type="password" class="form-control" #userpassword
+                                        placeholder="Enter Password" size="50" formControlName="userpassword">
+                                    <div *ngIf="hasError('userpassword', 'required')" class="text-danger">
+                                        <small>Password is required.</small>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn login-btn"
+                                        [disabled]="!userloginForm.valid">Submit</button>
+                                </div>
+                                <div class="text-center">
+                                    <a (click)="showregistrationForm()">Don't Have Account? Register Here</a>
+                                </div>
+
+                            </form>
+
+                        </div>
+                        <div class="tab-pane fade" id="admin-tab-pane" role="tabpanel" aria-labelledby="admin-tab"
+                            tabindex="0">
+                            <div class="text-center mb-5">
+                                <p class="login-text">Admin Login</p>
+                            </div>
+                            <form [formGroup]="loginForm" (ngSubmit)="submitForm(mail.value, pass.value)">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label login-label">Email address</label>
+                                    <input type="email" class="form-control" #mail aria-describedby="emailHelp"
+                                        placeholder="Enter Email" size="50" formControlName="email" required>
+                                    <div *ngIf="hasError('email', 'required')" class="text-danger">Email is required.
+                                    </div>
+                                    <div *ngIf="hasError('email', 'email')" class="text-danger">Please enter a valid
+                                        email
+                                        address.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label login-label">Password</label>
+                                    <input type="password" class="form-control" #pass placeholder="Enter Password"
+                                        size="50" formControlName="password">
+                                    <div *ngIf="hasError('password', 'required')" class="text-danger">Password is
+                                        required.
+                                    </div>
+                                    <div *ngIf="hasError('password', 'minlength')" class="text-danger">Password must be
+                                        at
+                                        least
+                                        8 characters long.</div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn login-btn"
+                                        [disabled]="!loginForm.valid">Submit</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="mb-3">
-                <div class="footer-item">
-                    <p class="item-title mb-1">Useful Links</p>
-                    <ul class="ms-3 mb-0">
-                        <li><a #latest (click)="navigate(latest.textContent)">Latest News</a></li>
-                        <li><a #trending (click)="navigate(trending.textContent)">Trending News</a></li>
-                        <li><a #popular (click)="navigate(popular.textContent)">Popular News</a></li>
-                        <li><a #featured (click)="navigate(featured.textContent)">Featured News</a></li>
-                        <li><a #mostViewed (click)="navigate(mostViewed.textContent)">Most Viewed</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="footer-item">
-                    <p class="item-title mb-1">Category</p>
-                    <ul class="ms-3">
-                        <li><a #enter (click)=" navigate(enter.textContent)">Entertainment</a></li>
-                        <li><a #politics (click)=" navigate(politics.textContent)">Politics</a></li>
-                        <li><a #bollywood (click)=" navigate(bollywood.textContent)">Bollywood</a></li>
-                        <li><a #health (click)=" navigate(health.textContent)">Health & Wellness</a></li>
-                        <li><a #edu (click)=" navigate(edu.textContent)">Education</a></li>
-                    </ul>
-                </div>
+            <div *ngIf="userregistration">
+                <form>
+                    <div class="mb-3">
+                        <label for="regemail" class="form-label login-label">Email address</label>
+                        <input type="email" class="form-control" #usermail aria-describedby="emailHelp"
+                            placeholder="Enter Email" size="50" formControlName="regemail">
+                        <!-- <div *ngIf="hasError('regemail', 'required') || hasError('regemail', 'email')"
+                            class="text-danger">
+                            <small *ngIf="hasError('regemail', 'required')">Email is required.</small>
+                            <small *ngIf="hasError('regemail', 'email')">Invalid email format.</small>
+                        </div> -->
+                    </div>
+                    <div class="mb-3">
+                        <label for="userpassword" class="form-label login-label">Password</label>
+                        <input type="password" class="form-control" #userpassword placeholder="Enter Password" size="50"
+                            formControlName="regpassword">
+                        <!-- <div *ngIf="hasError('regpassword', 'required')" class="text-danger">
+                            <small>Password is required.</small>
+                        </div> -->
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn login-btn" [disabled]="!userloginForm.valid">Submit</button>
+                    </div>
+                    <div class="text-center">
+                        <a (click)="showregistrationForm()">Don't Have Account? Register Here</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
+<div *ngIf="loginasadmin"><app-admin-panel></app-admin-panel></div>
+<div *ngIf="loginasuser">
+    <app-user-panel></app-user-panel>
 </div>

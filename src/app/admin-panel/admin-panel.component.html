@@ -1,0 +1,41 @@
+<!-- <p>admin-panel works!</p> -->
+<div class="admin-panel">
+    <div class="container">
+        <h1 class="table-heading">Contact Details</h1>
+        <!-- <div>
+            <input type="text" #message placeholder="Enter notification message">
+            <button (click)="publishNotification(message.value)">Publish Notification</button>
+        </div> -->
+        <!-- <form class="d-flex">
+                <input class="form-control nav-search me-2" [(ngModel)]="searchText" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn" type="submit">Search</button>
+            </form> -->
+        <!-- <div class="form-outline"> -->
+            <input type="search" [(ngModel)]="searchText" class="form-control mb-2" id="form1" placeholder="search"
+                size="60" />
+        <!-- </div> -->
+        <div class="table-responsive">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="bg-primary text-white">
+                        <!-- <th>Sr No.</th> -->
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Subject</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let x of contactDataArray| filter:searchText">
+                        <!-- <td>{{i+1}}</td> -->
+                        <td>{{x.name}}</td>
+                        <td><a href="mailto:{{x.email}}">{{x.email}}</a></td>
+                        <td>{{x.subject}}</td>
+                        <td>{{x.message}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

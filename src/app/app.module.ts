@@ -22,6 +22,9 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FilterPipe } from './filter.pipe';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { UserPanelComponent } from './user-panel/user-panel.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { FilterPipe } from './filter.pipe';
     CategoryListComponent,
     PageNotFoundComponent,
     FilterPipe,
+    AdminPanelComponent,
+    AdminLoginComponent,
+    UserPanelComponent,
     
   ],
   imports: [

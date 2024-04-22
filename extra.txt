@@ -1,0 +1,74 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../user.service';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
+})
+export class LoginComponent implements OnInit {
+  loginForm: FormGroup;
+  userloginForm: FormGroup;
+  loginform: boolean = true;
+  userregistration: boolean = false;
+  loginasadmin: boolean = false;
+  loginasuser: boolean = false;
+
+  constructor(private formBuilder: FormBuilder, private userService: UserService) {}
+
+  ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+    });
+
+    this.userloginForm = this.formBuilder.group({
+      useremail: ['', [Validators.required, Validators.email]],
+      userpassword: ['', Validators.required],
+    });
+  }
+
+  onSubmit() {
+    if (this.loginForm.valid) {
+      const { email, password } = this.loginForm.value;
+      // Assuming UserService has a login method that returns a boolean indicating successful login
+      this.userService.login(email, password).subscribe((loggedIn) => {
+        if (loggedIn) {
+          this.loginform = false;
+          this.loginasadmin = true;
+        } else {
+          // Show error message for invalid credentials
+        }
+      });
+    }
+  }
+
+  onSubmitUser() {
+    if (this.userloginForm.valid) {
+      const { useremail, userpassword } = this.userloginForm.value;
+      // Assuming UserService has a login method that returns a boolean indicating successful login
+      this.userService.login(useremail, userpassword).subscribe((loggedIn) => {
+        if (loggedIn) {
+          this.loginform = false;
+          this.loginasuser = true;
+        } else {
+          // Show error message for invalid credentials
+        }
+      });
+    }
+  }
+
+  showregistrationForm() {
+    this.loginform = false;
+    this.userregistration = true;
+  }
+
+  hasError(controlName: string, errorName: string) {
+    return this.loginForm.get(controlName)?.hasError(errorName);
+  }
+
+  hasErrorUser(controlName: string, errorName: string) {
+    return this.userloginForm.get(controlName)?.hasError(errorName);
+  }
+}

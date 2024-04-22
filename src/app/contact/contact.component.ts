@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ApiServicesService } from '../api-services.service';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -8,7 +9,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
-  constructor(private http: HttpClient, private formBuilder: FormBuilder) {
+  contactDataArray: any;
+  constructor(private http: HttpClient, private contact_data: ApiServicesService, private formBuilder: FormBuilder) {
+    contact_data.getcontactdata().subscribe((data: any) => {
+      this.contactDataArray = data;
+      // this.contactDataArray = this.contactDataArray;
+      console.log(this.contactDataArray)
+    });
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -31,7 +38,7 @@ export class ContactComponent implements OnInit {
   getContact() {
     debugger;
     if (this.contactForm.valid) {
-      this.http.post("http://localhost:3000/locations", this.contactDetailsObject).subscribe((res: any) => {
+      this.http.post("http://localhost:3000/contactdetails", this.contactDetailsObject).subscribe((res: any) => {
         this.contactDetailsObject.name = ""
         this.contactDetailsObject.email = "";
         this.contactDetailsObject.subject = "";
@@ -45,5 +52,6 @@ export class ContactComponent implements OnInit {
   }
   ngOnInit(): void {
   }
+  
 }
 
