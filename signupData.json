@@ -1,0 +1,20 @@
+{
+  "signupData": [
+    {
+      "id": "a70c",
+      "regemail": "dv@gmail.com",
+      "regpassword": "Dv@2397"
+    },
+    {
+      "id": "6e84",
+      "regemail": "xyz@gmail.com",
+      "regpassword": "Xyz@2397"
+    },
+    {
+      "id": "9121",
+      "regname": "Dhaval",
+      "regemail": "dv@gmail.com",
+      "regpassword": "xyzda"
+    }
+  ]
+}

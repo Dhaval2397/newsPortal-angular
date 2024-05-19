@@ -49,8 +49,8 @@
                                     <button type="submit" class="btn login-btn"
                                         [disabled]="!userloginForm.valid">Submit</button>
                                 </div>
-                                <div class="text-center">
-                                    <a (click)="showregistrationForm()">Don't Have Account? Register Here</a>
+                                <div class="text-center mt-2">
+                                    <a (click)="showregistrationForm()" class="sign_up-link">Don't Have Account? Register Here</a>
                                 </div>
 
                             </form>
@@ -94,32 +94,45 @@
                 </div>
             </div>
             <div *ngIf="userregistration">
-                <form>
-                    <div class="mb-3">
+                <div class="login-form py-5 px-3 my-4">
+                <form [formGroup]="userregistrationform" (ngSubmit)="onSubmitregister(userregistrationform)">
+                    <div class="text-center login-label"><p class="login-text">Sign UP Form</p></div>
+                    <div class="form-group mb-3">
+                        <label for="regname" class="form-label login-label">Name</label>
+                        <input type="text" class="form-control" #regname aria-describedby="emailHelp"
+                            placeholder="Enter Email" size="50" formControlName="regname">
+                        <div *ngIf="hasError('regname', 'required')"
+                            class="text-danger">
+                            <small *ngIf="hasError('regemail', 'required')">Name is required.</small>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
                         <label for="regemail" class="form-label login-label">Email address</label>
-                        <input type="email" class="form-control" #usermail aria-describedby="emailHelp"
+                        <input type="email" class="form-control" #regmail aria-describedby="emailHelp"
                             placeholder="Enter Email" size="50" formControlName="regemail">
-                        <!-- <div *ngIf="hasError('regemail', 'required') || hasError('regemail', 'email')"
+                        <div *ngIf="hasError('regemail', 'required') || hasError('regemail', 'email')"
                             class="text-danger">
                             <small *ngIf="hasError('regemail', 'required')">Email is required.</small>
                             <small *ngIf="hasError('regemail', 'email')">Invalid email format.</small>
-                        </div> -->
+                        </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="form-group mb-3">
                         <label for="userpassword" class="form-label login-label">Password</label>
-                        <input type="password" class="form-control" #userpassword placeholder="Enter Password" size="50"
+                        <input type="password" class="form-control" #regpassword placeholder="Enter Password" size="50"
                             formControlName="regpassword">
-                        <!-- <div *ngIf="hasError('regpassword', 'required')" class="text-danger">
+                        <div *ngIf="hasError('regpassword', 'required')" class="text-danger">
                             <small>Password is required.</small>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn login-btn" [disabled]="!userloginForm.valid">Submit</button>
+                        <button type="submit" class="btn login-btn" [disabled]="!userregistrationform.valid">Submit</button>
                     </div>
-                    <div class="text-center">
+                    <!-- <div class="text-center">
                         <a (click)="showregistrationForm()">Don't Have Account? Register Here</a>
-                    </div>
+                    </div> -->
                 </form>
+            </div>
             </div>
         </div>
     </div>

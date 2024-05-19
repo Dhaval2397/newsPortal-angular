@@ -3,7 +3,7 @@
     <div class="mb-5">
         <p class="detail-title">{{title}}</p>
         <div class="detail-img-wrapper my-4">
-            <img  src="{{src}}" width="100%" height="400px" alt="news_img">
+            <img src="{{src}}" width="100%" height="400px" alt="news_img">
         </div>
         <p class="detail-description">{{desc}}</p>
         <p class="detail-content">{{cont}}</p>
@@ -17,34 +17,23 @@
             <div class="row g-2">
                 <div class="col-12 col-md-6" *ngFor="let x of news_data_arr_1">
                     <div class="card h-100">
-                        <img *ngIf="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM=';"
-                            [src]="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                        <img [src]="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
                             class="card-img-top" alt="news_img" width="auto" height="300px">
-                        <!-- <ng-template #defaultImage>
-                            <img src="default-image-url.jpg" alt="Default Image">
-                        </ng-template> -->
                         <div class="card-body">
-                            <a (click)="navigate(x.title, x.description, x.content, x.urlToImage)"
-                                class="card-text" | filter:searchText>{{x.title}}</a>
+                            <a (click)="navigate(x.title, x.description, x.content, x.urlToImage)" class="card-text">{{x.title}}</a>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="more-news mb-5">
             <div class="row gy-4 gx-2">
                 <div class="col-12 col-md-6 col-lg-4" *ngFor="let y of news_data_arr_2">
                     <div class="card h-100">
-                        <img *ngIf="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM=';"
-                            [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                        <img [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
                             class="card-img-top" alt="news_img" height="200px" width="auto">
-                        <!-- <ng-template #defaultImage>
-                            <img src="default-image-url.jpg" alt="Default Image">
-                        </ng-template> -->
                         <div class="card-body">
-                            <a (click)="navigate(y.title, y.description, y.content, y.urlToImage)"
-                                class="card-text" | filter:searchText>{{y.title}}</a>
+                            <a (click)="navigate(y.title, y.description, y.content, y.urlToImage)" class="card-text">{{y.title}}</a>
                         </div>
                     </div>
                 </div>
