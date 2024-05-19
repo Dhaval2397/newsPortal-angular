@@ -14,15 +14,13 @@
                     </li>
                 </ul>
                 <div class="tab-content sn-content p-3">
-                    <div class="tab-pane fade show active" id="featured">
+                    <div class="tab-pane fade show active" id="featured" *ngFor="let z of news_data_arr_1">
                         <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
-                            <img src="https://miro.medium.com/v2/resize:fit:800/1*Bl6HcbZYF77-i8fjUMSWAw.jpeg"
+                            <img [src]="z.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
                                 class="img-fluid h-25 w-25" alt="news">
-                            <div class="ms-1"><a href="">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. A,
-                                    debitis.</a> </div>
+                            <div class="ms-1"><a (click)="navigate_detial(z.title, z.description, z.content, z.urlToImage, title)">{{z.title}}</a> </div>
                         </div>
-                        <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <!-- <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
                             <img src="https://globalnews.ca/wp-content/uploads/2019/12/contest-davidson-newspaper.jpg?quality=85&strip=all&w=336"
                                 class="img-fluid h-25 w-25" alt="news">
                             <div class="ms-1"><a href="">Lorem ipsum dolor sit amet consectetur adipisicing
@@ -35,16 +33,15 @@
                             <div class="ms-1"><a href="">Lorem ipsum dolor sit amet consectetur adipisicing
                                     elit. A,
                                     debitis.</a> </div>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="tab-pane fade" id="popular">
+                    <div class="tab-pane fade" id="popular" *ngFor="let x of news_data_arr_2">
                         <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
-                            <img src="https://static.toiimg.com/thumb/msid-108246802,width-450,resizemode-4,imgsize-42130/92120052.jpg"
+                            <img [src]="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvxU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
                                 class="img-fluid h-25 w-25" alt="news">
-                            <div class="ms-1"><a href="">India ensuring no one exercises hegemony in Indian
-                                    Ocean: Rajnath Singh's veiled dig at China</a> </div>
+                            <div class="ms-1"><a (click)="navigate_detial(x.title, x.description, x.content, x.urlToImage, title)">{{x.title}}</a></div>
                         </div>
-                        <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <!-- <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
                             <img src="https://c.ndtvimg.com/2024-03/d63da9e8_pm-narendra-modi_120x90_06_March_24.jpg"
                                 class="img-fluid h-25 w-25" alt="news">
                             <div class="ms-1"><a href="">"Using All Might To Save Culprit": PM's Sheikh
@@ -56,17 +53,15 @@
                             <div class="ms-1"><a href="">Ukrainian YouTuber finds deepfakes of herself on
                                     Chinese social media, claims they're being used to promote propagand</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="tab-pane fade" id="latest">
+                    <div class="tab-pane fade" id="latest" *ngFor="let y of news_data_arr_3">
                         <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
-                            <img src="https://www.livemint.com/lm-img/img/2024/03/06/600x338/SC_1709708664088_1709708664225.jpg"
+                            <img [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvyU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
                                 class="img-fluid h-25 w-25" alt="news">
-                            <div class="ms-1"><a href="">
-                                    Sandeshkhali case: West Bengal govt seeks urgent listing of plea in SC
-                                    against transfer of probe to CBI</a></div>
+                            <div class="ms-1"><a (click)="navigate_detial(y.title, y.description, y.content, y.urlToImage, title)">{{y.title}}</a></div>
                         </div>
-                        <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <!-- <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
                             <img src="https://images.indianexpress.com/2024/03/Modi-N24.jpeg?w=430"
                                 class="img-fluid h-25 w-25" alt="news">
                             <div class="ms-1"><a href="">Lorem ipsum dolor sit amet consectetur adipisicing
@@ -78,7 +73,7 @@
                                 class="img-fluid h-25 w-25" alt="news">
                             <div class="ms-1"><a href="">7 more Indians release video, say forced to fight
                                     Ukraine war by Russian army</a> </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -96,15 +91,14 @@
                         <a href="#recent" class="nav-link sn-link" data-bs-toggle="tab">Most Recent</a>
                     </li>
                 </ul>
-                <div class="tab-content sn-content p-3">
-                    <div class="tab-pane fade show active h-100" id="viewed">
+                <div class="tab-content sn-content p-3" >
+                    <div class="tab-pane fade show active h-100" id="viewed" *ngFor="let a of news_data_arr_4">
                         <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
-                            <img src="https://i.guim.co.uk/img/media/2941c4661a57c10a0adb922459bb92439c65802e/0_0_2999_1800/master/2999.jpg?width=620&dpr=1&s=none"
+                            <img [src]="a.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvaU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
                                 class="img-fluid h-25 w-25" alt="news">
-                            <div class="ms-1"><a href="">Haley wins surprise Vermont victory as Biden and Trump
-                                    dominate Super Tuesday</a></div>
+                            <div class="ms-1"><a (click)="navigate_detial(a.title, a.description, a.content, a.urlToImage, title)">{{a.title}}</a></div>
                         </div>
-                        <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <!-- <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
                             <img src="https://i.guim.co.uk/img/media/421289a6ae72b9475ec6143fd6b26f22d7cf3e59/0_187_4374_2625/master/4374.jpg?width=620&dpr=1&s=none"
                                 class="img-fluid h-25 w-25" alt="news">
                             <div class="ms-1"><a href="">People in England facing food poisoning ‘Russian
@@ -116,16 +110,15 @@
                             <div class="ms-1"><a href="">Hypervaccinated’ man reportedly received 217 Covid jabs
                                     without side-effects
                                 </a></div>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="tab-pane fade show h-100" id="read">
+                    <div class="tab-pane fade show h-100" id="read" *ngFor="let b of news_data_arr_5">
                         <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
-                            <img src="https://c.ndtvimg.com/2022-11/c9j2ghq_rahul-priyanka_625x300_24_November_22.jpg"
+                            <img [src]="b.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvbU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
                                 class="img-fluid h-25 w-25" alt="news">
-                            <div class="ms-1"><a href="">Priyanka Gandhi's Poll Debut From Raebareli, Rahul To
-                                    Try And Reclaim Amethi</a> </div>
+                            <div class="ms-1"><a (click)="navigate_detial(b.title, b.description, b.content, b.urlToImage, title)">{{b.title}}</a></div>
                         </div>
-                        <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <!-- <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
                             <img src="https://c.ndtvimg.com/2023-07/q3722mug_electric-vehicles-bloomberg_625x300_18_July_23.jpg"
                                 class="img-fluid h-25 w-25" alt="news">
                             <div class="ms-1"><a href="">Electric Vehicles Emit More Particle Pollution Than
@@ -136,16 +129,15 @@
                                 class="img-fluid h-25 w-25" alt="news">
                             <div class="ms-1"><a href="">Trump, Biden Dominate Super Tuesday Polls As They March
                                     Toward Rematch</a> </div>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="tab-pane fade show h-100" id="recent">
+                    <div class="tab-pane fade show h-100" id="recent" *ngFor="let c of news_data_arr_6">
                         <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
-                            <img src="https://images.indianexpress.com/2024/03/ashwin-100th-test.jpg?w=640"
+                            <img [src]="c.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvcU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
                                 class="img-fluid h-25 w-25" alt="news">
-                            <div class="ms-1"><a href="">R Ashwin’s journey to 100 Tests, through the eyes of
-                                    wife Prithi</a> </div>
+                            <div class="ms-1"><a (click)="navigate_detial(c.title, c.description, c.content, c.urlToImage, title)">{{c.title}}</a></div>
                         </div>
-                        <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
+                        <!-- <div class="d-flex mb-2 align-items-start sn-content-item p-2 rounded">
                             <img src="https://images.indianexpress.com/2024/03/Nirav-Modi-Vijay-Mallya.jpg?w=640"
                                 class="img-fluid h-25 w-25" alt="news">
                             <div class="ms-1"><a href="">Modi ka Parivar: Posters with picture of PM with
@@ -156,7 +148,7 @@
                                 class="img-fluid h-25 w-25" alt="news">
                             <div class="ms-1"><a href="">JUST IN: Ratan Tata unveils his secret to enrich
                                     ordinary Indians.</a> </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

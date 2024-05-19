@@ -1417,3 +1417,373 @@
         </div>
     </div>
 </div>
+<div class="category-wrapper" *ngIf="title === 'Latest News'">
+
+    <div class="container">
+        <div class="trending mb-5">
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let x of bussiness_data_arr_1">
+                    <div class="item-inner">
+                        <img [src]="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                            height="500px" width="100%" />
+                        <div class="tr-title">
+                            <a
+                                (click)="navigate_detial(x.title, x.description, x.content, x.urlToImage, title)">{{x.title}}</a>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+        <div class="detail-list mb-5">
+            <p class="read-more">Read More</p>
+            <div class="row g-2">
+                <div class="col-12 col-sm-6 col-md-4" *ngFor="let y of bussiness_data_arr_2">
+                    <div class="card de-img p-1 h-100">
+                        <img [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                            class="card-img-top" alt="..." height="200px">
+                        <div class="card-body pb-3">
+                            <a (click)="navigate_detial(y.title, y.description, y.content, y.urlToImage, title)"
+                                class="card-text mb-5">{{y.title}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid exclusive-cat py-4 mb-5">
+        <div class="container">
+            <div>
+                <p class="exclusive-news">Exclusive News</p>
+                <owl-carousel-o [options]="customOptions">
+                    <ng-template carouselSlide *ngFor="let z of news_data_arr_3">
+                        <div class="h-100">
+                            <div class="card ec-img p-1">
+                                <img [src]="z.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                                    class="card-img-top" alt="..." height="175px">
+                                <div class="card-body pb-3" style="height: 180px;">
+                                    <a (click)="navigate_detial(z.title, z.description, z.content, z.urlToImage, title)"
+                                        class="card-text mb-5">{{z.title}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="more-news">
+            <p class="more-news-title">More News</p>
+            <div class="row">
+                <div class="col-12 col-lg-6" *ngFor="let w of bussiness_data_arr_3">
+                    <div class="left-part">
+                        <div class="d-flex mb-3 align-items-start mn-item p-3 rounded bg-white">
+                            <img [src]="w.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                                class="h-100 w-25" alt="news">
+                            <div class="ms-3 mn-contan"><a
+                                    (click)="navigate_detial(w.title, w.description, w.content, w.urlToImage, title)"
+                                    class="mn-text">{{w.title}}</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="category-wrapper" *ngIf="title === 'Trending News'">
+    <div class="container">
+        <div class="trending mb-5">
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let x of sport_data_arr_1">
+                    <div class="item-inner">
+                        <img [src]="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                            height="500px" width="100%" />
+                        <div class="tr-title">
+                            <a
+                                (click)="navigate_detial(x.title, x.description, x.content, x.urlToImage,title)">{{x.title}}</a>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+        <div class="detail-list mb-5">
+            <p class="read-more">Read More</p>
+            <div class="row g-2">
+                <div class="col-12 col-sm-6 col-md-4" *ngFor="let y of sport_data_arr_2">
+                    <div class="card de-img p-1 h-100">
+                        <img [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                            class="card-img-top" alt="..." height="200px">
+                        <div class="card-body pb-3">
+                            <a (click)="navigate_detial(y.title, y.description, y.content, y.urlToImage,title)"
+                                class="card-text mb-5">{{y.title}}</a>
+                        </div>
+                        <p class="d-none">{{y.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid exclusive-cat py-4 mb-5">
+        <div class="container">
+            <div>
+                <p class="exclusive-news">Exclusive News</p>
+                <owl-carousel-o [options]="customOptions">
+                    <ng-template carouselSlide *ngFor="let z of news_data_arr_1">
+                        <div class="card-deck h-100">
+                            <div class="card ec-img p-1">
+                                <div class="">
+                                    <img [src]="z.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                                        class="card-img-top" alt="..." height="175px">
+                                    <div class="card-body pb-3" style="height: 170px;">
+                                        <a (click)="navigate_detial(z.title, z.description, z.content, z.urlToImage, title)"
+                                            class="card-text mb-5">{{z.title}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="more-news">
+            <p class="more-news-title">More News</p>
+            <div class="row">
+                <div class="col-12 col-lg-6" *ngFor="let w of news_data_arr_2">
+                    <div class="left-part">
+                        <div class="d-flex mb-3 align-items-start mn-item p-3 rounded bg-white">
+                            <img [src]="w.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                                height="100px" width="auto" alt="news">
+                            <div class="ms-3 mn-contan"><a
+                                    (click)="navigate_detial(w.title, w.description, w.content, w.urlToImage, title)"
+                                    class="mn-text">{{w.title}}</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="category-wrapper" *ngIf="title === 'Popular News'">
+
+    <div class="container">
+        <div class="trending mb-5">
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let x of entertainment_data_arr_1">
+                    <div class="item-inner">
+                        <img [src]="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                            width="100%" height="500px" />
+                        <div class="tr-title">
+                            <a
+                                (click)="navigate_detial(x.title, x.description, x.content, x.urlToImage, title)">{{x.title}}</a>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+        <div class="detail-list mb-5">
+            <p class="read-more">Read More</p>
+            <div class="row g-2">
+                <div class="col-12 col-sm-6 col-md-4" *ngFor="let y of entertainment_data_arr_2">
+                    <div class="card de-img p-1 h-100">
+                        <img [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                            class="card-img-top" alt="..." height="200px">
+                        <div class="card-body pb-3">
+                            <a (click)="navigate_detial(y.title, y.description, y.content, y.urlToImage, title)"
+                                class="card-text mb-5">{{y.title}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid exclusive-cat py-4 mb-5">
+        <div class="container">
+            <div>
+                <p class="exclusive-news">Exclusive News</p>
+                <owl-carousel-o [options]="customOptions">
+                    <ng-template carouselSlide *ngFor="let z of bussiness_data_arr_3">
+                        <div class="h-100">
+                            <div class="card ec-img p-1">
+                                <img [src]="z.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                                    class="card-img-top" alt="..." height="175px">
+                                <div class="card-body pb-3" style="height: 180px;">
+                                    <a (click)="navigate_detial(z.title, z.description, z.content, z.urlToImage, title)"
+                                        class="card-text mb-5">{{z.title}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="more-news">
+            <p class="more-news-title">More News</p>
+            <div class="row">
+                <div class="col-12 col-lg-6" *ngFor="let w of news_data_arr_3">
+                    <div class="left-part">
+                        <div class="d-flex mb-3 align-items-start mn-item p-3 rounded bg-white">
+                            <img [src]="w.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                                class="h-100 w-25" alt="news">
+                            <div class="ms-3 mn-contan"><a
+                                    (click)="navigate_detial(w.title, w.description, w.content, w.urlToImage, title)"
+                                    class="mn-text">{{w.title}}</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="category-wrapper" *ngIf="title === 'Featured News'">
+    <div class="container">
+        <div class="trending mb-5">
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let x of technology_data_arr_1">
+                    <div class="item-inner">
+                        <img [src]="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                            width="100%" height="500px" />
+                        <div class="tr-title">
+                            <a
+                                (click)="navigate_detial(x.title, x.description, x.content, x.urlToImage, title)">{{x.title}}</a>
+                        </div>
+                        <p class="d-none">{{x.description}}</p>
+                        <p class="d-none">{{x.content}}</p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+        <div class="detail-list mb-5">
+            <p class="read-more">Read More</p>
+            <div class="row g-2">
+                <div class="col-12 col-sm-6 col-md-4" *ngFor="let y of technology_data_arr_2">
+                    <div class="card de-img p-1 h-100">
+                        <img [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                            class="card-img-top" alt="..." height="200px">
+                        <div class="card-body pb-3">
+                            <a (click)="navigate_detial(y.title, y.description, y.content, y.urlToImage, title)"
+                                class="card-text mb-5">{{y.title}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid exclusive-cat py-4 mb-5">
+        <div class="container">
+            <div>
+                <p class="exclusive-news">Exclusive News</p>
+                <owl-carousel-o [options]="customOptions">
+                    <ng-template carouselSlide *ngFor="let z of technology_data_arr_3">
+                        <div class="card ec-img p-1">
+                            <img [src]="z.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                                class="card-img-top" alt="..." height="175px">
+                            <div class="card-body pb-3" style="height: 170px;">
+                                <a (click)="navigate_detial(z.title, z.description, z.content, z.urlToImage, title)"
+                                    class="card-text mb-5">{{z.title}}</a>
+                            </div>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="more-news">
+            <p class="more-news-title">More News</p>
+            <div class="row">
+                <div class="col-12 col-lg-6" *ngFor="let w of bussiness_data_arr_2">
+                    <div class="left-part">
+                        <div class="d-flex mb-3 align-items-start mn-item p-3 rounded bg-white">
+                            <img [src]="w.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                                height="100px" width="auto" alt="news">
+                            <div class="ms-3 mn-contan"><a
+                                    (click)="navigate_detial(w.title, w.description, w.content, w.urlToImage, title)"
+                                    class="mn-text">{{ getDefaultTitle(w.title) }}</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="category-wrapper" *ngIf="title === 'Most Viewed'">
+    <div class="container">
+        <div class="trending mb-5">
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let x of science_data_arr_1">
+                    <div class="item-inner">
+                        <img [src]="x.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                            width="100%" height="500px" />
+                        <div class="tr-title">
+                            <a
+                                (click)="navigate_detial(x.title, x.description, x.content, x.urlToImage, title)">{{x.title}}</a>
+                        </div>
+                        <p class="d-none">{{x.description}}</p>
+                        <p class="d-none">{{x.content}}</p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+        <div class="detail-list mb-5">
+            <p class="read-more">Read More</p>
+            <div class="row g-2">
+                <div class="col-12 col-sm-6 col-md-4" *ngFor="let y of science_data_arr_2">
+                    <div class="card de-img p-1 h-100">
+                        <img [src]="y.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                            class="card-img-top" alt="..." height="200px">
+                        <div class="card-body pb-3">
+                            <a (click)="navigate_detial(y.title, y.description, y.content, y.urlToImage, title)"
+                                class="card-text mb-5">{{y.title}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid exclusive-cat py-4 mb-5">
+        <div class="container">
+            <div>
+                <p class="exclusive-news">Exclusive News</p>
+                <owl-carousel-o [options]="customOptions">
+                    <ng-template carouselSlide *ngFor="let z of science_data_arr_3">
+                        <div class="card ec-img p-1">
+                            <img [src]="z.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                                class="card-img-top" alt="..." height="175px">
+                            <div class="card-body pb-3" style="height: 170px;">
+                                <a (click)="navigate_detial(z.title, z.description, z.content, z.urlToImage, title)"
+                                    class="card-text mb-5">{{z.title}}</a>
+                            </div>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="more-news">
+            <p class="more-news-title">More News</p>
+            <div class="row">
+                <div class="col-12 col-lg-6" *ngFor="let w of bussiness_data_arr_2">
+                    <div class="left-part">
+                        <div class="d-flex mb-3 align-items-start mn-item p-3 rounded bg-white">
+                            <img [src]="w.urlToImage || 'https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM='"
+                                height="100px" width="auto" alt="news">
+                            <div class="ms-3 mn-contan"><a
+                                    (click)="navigate_detial(w.title, w.description, w.content, w.urlToImage, title)"
+                                    class="mn-text">{{ getDefaultTitle(w.title) }}</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
